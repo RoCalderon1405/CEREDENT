@@ -1,0 +1,58 @@
+.animation-flow-top,
+.animation-flow-top-show,
+.animation-flow-left,
+.animation-flow-right {
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  will-change: opacity;
+  animation-fill-mode: forwards;
+}
+
+ /* animation from left */
+.animation-flow-left {
+  animation-name: ani-flow-left;
+}
+
+ /* animation from right */
+.animation-flow-right {
+  animation-name: ani-flow-right;
+}
+
+ /* animation-flow-top { */
+.animation-flow-top {
+  animation-name: ani-flow-top;
+}
+
+ /* animation-flow-top-show { */
+.animation-flow-top-show {
+  animation-name: ani-flow-top-show;
+}
+
+@keyframes ani-flow-left {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+}
+
+@keyframes ani-flow-right {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes ani-flow-top {
+  from {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes ani-flow-top-show {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
