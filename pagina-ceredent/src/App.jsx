@@ -1,13 +1,13 @@
 import React from "react";
-import { Nav } from "./Components/Navbar/Nav";
 import { Header } from "./Components/Header/Header";
 import { AboutUs } from "./Components/AboutUs/AboutUs";
+import NavbarHome from "./Components/Navbar/NavbarHome";
 
 function App() {
 
   return (
     <>
-    <Nav/>
+    <NavbarHome/>
     <Header/>
     <AboutUs/>
     </>

@@ -35,21 +35,18 @@
 }
 
 #ceredentHeader {
-    width: 55%;
+    width: 75%;
 }
 
 .header__container-img, .header__container-logo {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    width: 100%;
 }
 
-.header__container-img {
-    filter: drop-shadow(5px 5px 5px #000000);
-
-}
-
-.logoCere {
-    width: 80%;
+#imgFamilia {
+    width: auto;
     justify-content: center;
+    filter: drop-shadow(5px 5px 5px #000000);
 }

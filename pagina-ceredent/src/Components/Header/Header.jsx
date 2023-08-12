@@ -9,7 +9,7 @@ export const Header = () => {
       <section id="header">
         <div className="header__container">
         <div className="header__container-img">
-            <img src={Familia} alt="logo" className="logoCere" />
+            <img src={Familia} alt="logo" id="imgFamilia" />
           </div>
           <div className="header__container-text">
             <div className="header__container-logo">
