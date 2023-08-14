@@ -1,12 +1,17 @@
-nav {
-    position: fixed !important;
-    top: 0;
-    background-color: #A5EEFD;
-}
-
 #logoCere {
-    width: 30%;
-    aspect-ratio: 3/2;
+    width: 84px;
+    min-width: 84px;
     object-fit: contain;
     mix-blend-mode: color-burn;
 }
+
+
+/* Se aplicó la media query debido a que no se podia modificar
+el flex-grow con facilidad desde el jsx, para una mejor visualización
+de los elementos en el navbar */
+@media screen and (min-width: 1024px) {
+    .flex-grow-lg {
+      flex-grow: 0 !important;
+    }
+  }
+  

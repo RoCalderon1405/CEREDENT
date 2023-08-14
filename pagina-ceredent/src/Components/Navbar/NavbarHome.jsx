@@ -1,92 +1,128 @@
-import React from 'react'
-import { Navbar, 
-  NavbarBrand, 
-  NavbarContent, 
-  NavbarItem, 
+import React from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
   Link,
-  Button
 } from "@nextui-org/react";
-import LogoCeredentNav from '../../assets/CEREDENTcorteSinText.png'
-import './navbarHome.css'
+import LogoCeredentNav from "../../assets/CEREDENTcorteSinText.png";
+import "./navbarHome.css";
+import { MyButton } from "../Button/MyButton";
 
 const NavbarHome = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
+    "¿Quiénes Somos",
+    "Nuestros Doctores",
+    "Casos Clínicos",
+    "Laboratorio Dental",
     "Log Out",
   ];
 
   return (
     <>
-   <Navbar onMenuOpenChange={setIsMenuOpen} static>
-      <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-        <NavbarBrand>
-        <img src={LogoCeredentNav} alt="CEREDENT" id="logoCere"/>
-        </NavbarBrand>
-      </NavbarContent>
+      <Navbar
+        isBordered
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
+        maxWidth="2xl"
+        height="5rem"
+        className="fixed flex-grow-0"
+      >
+        <NavbarContent className="lg:hidden" justify="start">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          />
+        </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem isActive>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item}
+        <NavbarContent className="lg:hidden" justify="center">
+          <NavbarBrand>
+            <img
+              src={LogoCeredentNav}
+              alt="CEREDENT"
+              id="logoCere"
+              className="w-{84}"
+            />
+          </NavbarBrand>
+        </NavbarContent>
+
+        {/* Medium device */}
+
+        <NavbarContent className="hidden lg:flex p-0" justify="center">
+          <NavbarBrand className="p-0">
+            <img src={LogoCeredentNav} alt="CEREDENT" id="logoCere" />
+          </NavbarBrand>
+        </NavbarContent>
+
+        <NavbarContent
+          className="hidden lg:flex justify-center gap-4"
+          justify="center"
+        >
+          <NavbarItem>
+            <Link color="foreground" href="#" fontSize="large">
+              ¿Quiénes Somos?
             </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
-    </>
-  )
-}
+          </NavbarItem>
+          <NavbarItem isActive>
+            <Link href="#" aria-current="page">
+              Nuestros Doctores
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link color="foreground" href="#">
+              Casos Clínicos
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link color="foreground" href="#">
+              Laboratorio Dental
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
 
-export default NavbarHome
+        <NavbarContent className="flex-grow-lg" justify="end">
+          <NavbarItem className="p-2 ">
+              <MyButton
+                as={Link}
+                size="md"
+                color="blue"
+                href="#"
+                variant="shadow"
+                className="w-auto text-xs"
+              >
+                Contáctanos
+              </MyButton>
+          </NavbarItem>
+        </NavbarContent>
+
+        <NavbarMenu>
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                className="w-full"
+                color={
+                  index === 1
+                    ? "warning"
+                    : index === menuItems.length - 1
+                    ? "danger"
+                    : "foreground"
+                }
+                href="#"
+                size="lg"
+              >
+                {item}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
+      </Navbar>
+    </>
+  );
+};
+
+export default NavbarHome;

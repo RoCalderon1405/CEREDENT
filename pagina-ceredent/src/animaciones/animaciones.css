@@ -28,6 +28,24 @@
   animation-name: ani-flow-top-show;
 }
 
+.animation-scale {
+ animation: scale 4s infinite;
+  will-change: transform;
+}
+
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @keyframes ani-flow-left {
   from {
     transform: translateX(-20px);

@@ -1,17 +1,16 @@
 import React from "react";
 import { Header } from "./Components/Header/Header";
-import { AboutUs } from "./Components/AboutUs/AboutUs";
 import NavbarHome from "./Components/Navbar/NavbarHome";
+import { About } from "./Components/About/About";
 
 function App() {
-
   return (
     <>
-    <NavbarHome/>
-    <Header/>
-    <AboutUs/>
+      <NavbarHome/>
+      <Header />
+      <About/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
