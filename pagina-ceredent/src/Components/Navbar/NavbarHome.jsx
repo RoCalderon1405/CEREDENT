@@ -32,7 +32,7 @@ const NavbarHome = () => {
         onMenuOpenChange={setIsMenuOpen}
         maxWidth="2xl"
         height="5rem"
-        className="fixed flex-grow-0"
+        className="flex-grow-0 bg-slate-200	"
       >
         <NavbarContent className="lg:hidden" justify="start">
           <NavbarMenuToggle
@@ -64,13 +64,18 @@ const NavbarHome = () => {
           justify="center"
         >
           <NavbarItem>
-            <Link color="foreground" href="#" fontSize="large">
+            <Link color="foreground" href="#aboutUs" fontSize="large">
               ¿Quiénes Somos?
             </Link>
           </NavbarItem>
           <NavbarItem isActive>
             <Link href="#" aria-current="page">
               Nuestros Doctores
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link color="foreground" href="#">
+              Nuestro servicios
             </Link>
           </NavbarItem>
           <NavbarItem>
