@@ -15,22 +15,8 @@ import {
 export const CardDoc = ({ id, nombre, nombreCompleto, about, img1, img2 }) => {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const [size, setSize] = useState("full");
-
-  console.log({nombre})
-  console.log("first")
-  // const sizes = [
-  //   "xs",
-  //   "sm",
-  //   "md",
-  //   "lg",
-  //   "xl",
-  //   "2xl",
-  //   "3xl",
-  //   "4xl",
-  //   "5xl",
-  //   "full",
-  // ];
-
+  console.log(id)
+ 
   const handleOpen = (size) => {
     setSize(size);
     onOpen();
@@ -40,11 +26,11 @@ export const CardDoc = ({ id, nombre, nombreCompleto, about, img1, img2 }) => {
       <Card
         isFooterBlurred
         radius="lg"
-        className="border-none bg-red-700 w-4/5 h-60"
+        className="border-none bg-red-700 w-[23rem] h-60 md:h-[15rem]"
       >
         <Image
           alt="Woman listing to music"
-          className="object-cover w-auto h-auto"
+          className="object-cover w-full h-full"
           src={img1}
         />
         <CardFooter className="justify-between font-bold before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">

@@ -21,6 +21,7 @@ module.exports = {
   },
   darkMode: "class",
     plugins: [
+      require('tailwindcss-animated'),
       nextui({
         layout: {
           spacingUnit: 4, // in px

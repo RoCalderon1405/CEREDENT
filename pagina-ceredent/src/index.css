@@ -46,6 +46,9 @@ body {
 
 /* GENERAL STYLES */
 
+section {
+  margin-bottom: .8rem;
+}
 
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */

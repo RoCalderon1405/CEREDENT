@@ -33,6 +33,42 @@
   will-change: transform;
 }
 
+.line-animation {
+  animation-name: barWidth;
+  will-change: transform;
+  margin: auto;
+}
+
+.line-animation {
+  width: 30%;
+  height: 5px;
+  background: rgb(134, 34, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(134, 34, 195, 1) 0%,
+    rgba(45, 105, 253, 1) 100%
+  );
+  animation: barWidth 3s linear infinite;
+}
+
+
+@keyframes barWidth {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 25%;
+  }
+  100% {
+    width: 0%;
+  }
+}
 
 @keyframes scale {
   0% {

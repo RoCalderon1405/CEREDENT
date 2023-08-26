@@ -11,7 +11,7 @@ import {
 } from "@nextui-org/react";
 import LogoCeredentNav from "../../assets/CEREDENTcorteSinText.png";
 import "./navbarHome.css";
-import { MyButton } from "../Button/MyButton";
+import { MyButton } from "../../Hooks/MyButton";
 
 const NavbarHome = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
