@@ -14,24 +14,20 @@ export const Header = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("animate-fade-left");
-      } else {
-        entry.target.classList.remove("animate-fade-left");
-      }
+      } 
     });
   };
   const animateFadeUp = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("animate-fade-up", "animate-duration-1000", "animate-ease-in-out");
-      } else {
-        entry.target.classList.remove("animate-fade-up");
-      }
+      } 
     });
   };
 
   // Crear instancias del hook de Intersection Observer
-  const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, { threshold: 0.5 });
-  const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, { threshold: 0.5 });
+  const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, { threshold: 0.8 });
+  const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, { threshold: 0.8 });
 
 
   return (
@@ -64,7 +60,7 @@ export const Header = () => {
             </div>
           </div>
           <div 
-          className="h-[70%] flex items-center justify-center w-full overflow-hidden md:w-1/2 md:m-auto md:h-[90%] lg:w-1/2"
+          className="h-[70%] flex items-center justify-center w-full overflow-hidden md:w-1/2 md:m-auto md:h-[90%] lg:w-1/2 lg:mt-0"
           ref={useAnimateFadeUp}
           >
             <img

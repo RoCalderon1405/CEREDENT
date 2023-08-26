@@ -19,10 +19,18 @@ const NavbarHome = () => {
   const menuItems = [
     "¿Quiénes Somos",
     "Nuestros Doctores",
-    "Casos Clínicos",
+    "Nuestros Servicios",
     "Laboratorio Dental",
-    "Log Out",
+    "Testimonios",
   ];
+
+  const menuNav = [
+    "#aboutUs",
+    "#doctores",
+    "#servicios",
+    "#trabajos",
+    "#testimonios"
+  ]
 
   return (
     <>
@@ -69,23 +77,23 @@ const NavbarHome = () => {
             </Link>
           </NavbarItem>
           <NavbarItem isActive>
-            <Link href="#" aria-current="page">
+            <Link href="#doctores" aria-current="page">
               Nuestros Doctores
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link color="foreground" href="#servicios">
               Nuestro servicios
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#">
-              Casos Clínicos
+            <Link color="foreground" href="#trabajos">
+            Laboratorio Dental
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#">
-              Laboratorio Dental
+            <Link color="foreground" href="#testimonios">
+              Testimonios
             </Link>
           </NavbarItem>
         </NavbarContent>
@@ -96,7 +104,7 @@ const NavbarHome = () => {
                 as={Link}
                 size="md"
                 color="blue"
-                href="#"
+                href="#contact"
                 variant="shadow"
                 className="w-auto text-xs"
               >
@@ -117,7 +125,7 @@ const NavbarHome = () => {
                     ? "danger"
                     : "foreground"
                 }
-                href="#"
+                href={menuNav[index]}
                 size="lg"
               >
                 {item}

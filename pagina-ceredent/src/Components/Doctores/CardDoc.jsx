@@ -15,7 +15,6 @@ import {
 export const CardDoc = ({ id, nombre, nombreCompleto, about, img1, img2 }) => {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const [size, setSize] = useState("full");
-  console.log(id)
  
   const handleOpen = (size) => {
     setSize(size);
