@@ -8,48 +8,48 @@ import { ImgAbout } from "./ImgAbout";
 export const About = () => {
   const Imgs = [
     {
-      id:1,
+      id: 1,
       imagen: AtenciónImg,
       description: "Description",
-      ref:"h",
-      delay:100
+      ref: "h",
+      delay: 100,
     },
     {
-      id:2,
+      id: 2,
       imagen: AtenciónImg,
       description: "Description",
-      ref:"h",
-      delay:200
+      ref: "h",
+      delay: 200,
     },
     {
-      id:3,
+      id: 3,
       imagen: AtenciónImg,
       description: "Description",
-      ref:"h",
-      delay:300
+      ref: "h",
+      delay: 300,
     },
     {
-      id:4,
+      id: 4,
       imagen: AtenciónImg,
       description: "Description",
-      ref:"h",
-      delay:400
+      ref: "h",
+      delay: 400,
     },
     {
-      id:5,
+      id: 5,
       imagen: AtenciónImg,
       description: "Description",
-      ref:"h",
-      delay:500
+      ref: "h",
+      delay: 500,
     },
     {
-      id:6,
+      id: 6,
       imagen: AtenciónImg,
       description: "Description",
-      ref:"h",
-      delay:600
-    }
-  ]
+      ref: "h",
+      delay: 600,
+    },
+  ];
   // Definir las funciones de callback para los efectos de animación
   const animateFadeLeft = (entries) => {
     entries.forEach((entry) => {
@@ -57,13 +57,15 @@ export const About = () => {
         entry.target.classList.add(
           "animate-fade-left",
           "animate-duration-1000",
-          "animate-ease-in-out"
+          "animate-ease-in-out",
+          "opacity:1"
         );
       } else {
         entry.target.classList.remove(
           "animate-fade-left",
           "animate-duration-1000",
-          "animate-ease-in-out"
+          "animate-ease-in-out",
+          "opacity:1"
         );
       }
     });
@@ -74,13 +76,15 @@ export const About = () => {
         entry.target.classList.add(
           "animate-fade-right",
           "animate-duration-1000",
-          "animate-ease-in-out"
+          "animate-ease-in-out",
+          "opacity:1"
         );
       } else {
         entry.target.classList.remove(
           "animate-fade-right",
           "animate-duration-1000",
-          "animate-ease-in-out"
+          "animate-ease-in-out",
+          "opacity:1"
         );
       }
     });
@@ -91,7 +95,17 @@ export const About = () => {
         entry.target.classList.add(
           "animate-fade-up",
           "animate-duration-1000",
-          "animate-ease-in-out"
+          "animate-delay-[500ms]",
+          "animate-ease-in-out",
+          "opacity:1"
+        );
+      } else {
+        entry.target.classList.remove(
+          "animate-fade-up",
+          "animate-duration-1000",
+          "animate-delay-[500ms]",
+          "animate-ease-in-out",
+          "opacity:1"
         );
       }
     });
@@ -105,7 +119,7 @@ export const About = () => {
     threshold: 0.8,
   });
   const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, {
-    threshold: 0.3,
+    threshold: 0.8,
   });
 
   return (
@@ -113,13 +127,13 @@ export const About = () => {
       <div className="container mx-auto py-10 lg:gap-10">
         <div className="flex flex-col items-center lg:justify-center md:w-[80%] m-auto">
           <h2
-            className="text-5xl md:text-6xl font-black mb-4 text-blue-800"
-            ref={useAnimateFadeRight}
+            className="text-5xl md:text-6xl font-black mb-4 text-blue-800 opacity-0"
+            ref={useAnimateFadeUp}
           >
             Conócenos 👋
           </h2>
           <p
-            className="text-sm md:text-2xl md:text-center mt-1 mb-1 text-indigo-50"
+            className="text-sm md:text-2xl md:text-center mt-1 mb-1 text-indigo-50 opacity-0"
             ref={useAnimateFadeLeft}
           >
             En CEREDENT, estamos comprometidos a brindar atención dental de alta
@@ -130,16 +144,17 @@ export const About = () => {
         </div>
 
         <div className="mt-8">
-          <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
-          ref={useAnimateFadeUp}
+          <div
+            className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
+            // ref={useAnimateFadeUp}
           >
             {Imgs.map((item) => (
               <ImgAbout
-              key={item.id}
-              imagen={item.imagen}
-              description={item.description}
-              efecto={item.ref}
-              delay={item.delay}
+                key={item.id}
+                imagen={item.imagen}
+                description={item.description}
+                efecto={item.ref}
+                delay={item.delay}
               />
             ))}
           </div>

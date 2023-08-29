@@ -39,7 +39,21 @@ export const Doctores = () => {
   const animateFadeUp = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("animate-fade-up", "animate-duration-1500", "animate-ease-in-out");
+        entry.target.classList.add(
+          "animate-fade-up",
+          "animate-duration-1000",
+          "animate-delay-[500ms]",
+          "animate-ease-in-out",
+          "opacity:1"
+        );
+      } else {
+        entry.target.classList.remove(
+          "animate-fade-up",
+          "animate-duration-1000",
+          "animate-delay-[500ms]",
+          "animate-ease-in-out",
+          "opacity:1"
+        );
       }
     });
   };
@@ -62,21 +76,21 @@ export const Doctores = () => {
   };
 
   // Crear instancias del hook de Intersection Observer
-  const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, { threshold: 0.5 });
-  const useAnimateFadeRight = useIntersectionObserver(animateFadeRight, { threshold: 0.5 });
+  const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, { threshold: 0.1 });
+  const useAnimateFadeRight = useIntersectionObserver(animateFadeRight, { threshold: 0.1 });
   const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, { threshold: 0.2 });
   return (
     <section id="doctores" className="py-5 bg-blue-600">
       <div className="container m-auto py-10">
         <div className="">
           <h1 
-          className="flex justify-center mt-10 text-3xl font-bold text-blue-200"
-          ref={useAnimateFadeRight}
+          className="flex justify-center mt-10 text-3xl font-bold text-blue-200 opacity-0"
+          ref={useAnimateFadeUp}
           >
             Nuestro Equipo <FaUserMd className="text-white ml-5" />
           </h1>
 
-          <p className="text-center text-white text-lg mt-10"
+          <p className="text-center text-white text-lg mt-10 opacity-0"
           ref={useAnimateFadeLeft}>
             En CEREDENT contamos con un equipo de doctores altamente capacitados
             y comprometidos con tu salud bucal. Nuestros profesionales tienen
@@ -87,8 +101,8 @@ export const Doctores = () => {
           <div className="line-animation"></div>
         </div>
         <div className="flex justify-center">
-        <div className="flex flex-col justify-around gap-5 mt-10 lg:flex-row lg:w-[80%]"
-        ref={useAnimateFadeUp}>
+        <div className="flex flex-col justify-around gap-5 mt-10 opacity-0 lg:flex-row lg:w-[80%]"
+        ref={useAnimateFadeRight}>
          {
            team.map((miembro) => (
              <CardDoc
