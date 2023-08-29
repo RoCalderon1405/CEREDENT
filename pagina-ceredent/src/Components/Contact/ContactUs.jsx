@@ -1,5 +1,4 @@
 import React from "react";
-import { Input } from "@nextui-org/react";
 import { ImWhatsapp } from "react-icons/im";
 import { LiaFacebookMessenger } from "react-icons/lia";
 import { BsInstagram } from "react-icons/bs";
@@ -7,6 +6,7 @@ import { AiOutlineMail } from "react-icons/ai";
 // import { AiOutlineUser } from "react-icons/ai";
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 import { CartaContact } from "./CartaContact";
+import { FormContactUs } from "./FormContactUs";
 
 export const ContactUs = () => {
   const contactos = [
@@ -146,34 +146,7 @@ export const ContactUs = () => {
               />
             ))}
           </div>
-          <div className="mt-8">
-            <div>
-              <h2>Déjanos un mensaje.</h2>
-            </div>
-            <Input
-              type="email"
-              variant="underlined"
-              isRequired
-              label="Email"
-              color="secondary"
-              isClearable
-              // startContent= {
-              // <AiOutlineUser className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-
-              // }
-            />
-            <Input
-              type="name"
-              variant="underlined"
-              isRequired
-              label="Nombre"
-              color="secondary"
-              isClearable
-              // startContent= {
-              // <AiOutlineMail className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-              // }
-            />
-          </div>
+          <FormContactUs/>
         </div>
       </div>
     </section>

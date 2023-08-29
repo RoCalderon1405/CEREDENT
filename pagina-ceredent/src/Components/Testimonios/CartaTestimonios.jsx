@@ -4,8 +4,8 @@ import testimonio1 from "../../assets/Testimonios/testimonio1.jpg"
 
 export const CartaTestimonios = () => {
   return (
-    <div>
-      <Card className="max-w-[340px] m-auto">
+    <div className="">
+      <Card className="max-w-[340px] m-auto overflow-hidden">
         <CardHeader className="justify-between">
           <div className="flex gap-5">
             <Avatar

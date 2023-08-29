@@ -21,7 +21,7 @@ export const MyButton = extendVariants(Button, {
     },
   },
   defaultVariants: { // <- modify/add default variants
-    color: "olive",
+    color: "blue",
     size: "xl",
   },
   compoundVariants: [ // <- modify/add compound variants
