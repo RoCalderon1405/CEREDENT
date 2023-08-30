@@ -50,6 +50,11 @@ section {
   margin-bottom: .8rem;
 }
 
+.horizontal-line {
+  border-top: 1px solid #ffffff; /* Color y grosor de la línea */
+  margin: 20px 0; /* Espacio arriba y abajo de la línea */
+}
+
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {

@@ -3,10 +3,11 @@ import { ImWhatsapp } from "react-icons/im";
 import { LiaFacebookMessenger } from "react-icons/lia";
 import { BsInstagram } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
-// import { AiOutlineUser } from "react-icons/ai";
+// import { BsPinMap } from "react-icons/bs";
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 import { CartaContact } from "./CartaContact";
 import { FormContactUs } from "./FormContactUs";
+import { MapaContact } from "./MapaContact";
 
 export const ContactUs = () => {
   const contactos = [
@@ -114,7 +115,7 @@ export const ContactUs = () => {
   });
 
   return (
-    <section className="" id="contact">
+    <section className="" id="contacto">
       <div className="container mx-auto py-10 lg:gap-10">
         <div className="flex flex-col items-center lg:justify-center md:w-[80%] m-auto">
           <h2
@@ -133,8 +134,8 @@ export const ContactUs = () => {
           </p>
           <div className="line-animation"></div>
         </div>
-        <div className="flex flex-col">
-          <div className="flex flex-col gap-5 mx- mt-10">
+        <div className="flex flex-col lg:grid lg:grid-cols-2">
+          <div className="flex flex-col gap-5 items-center mx-auto w-full mt-10">
             {contactos.map((item) => (
               <CartaContact
                 key={item.contactoId}
@@ -146,7 +147,10 @@ export const ContactUs = () => {
               />
             ))}
           </div>
-          <FormContactUs/>
+          <FormContactUs />
+          </div>
+          <div className="w-full min-w-[370px] my-10 ">
+            <MapaContact />
         </div>
       </div>
     </section>

@@ -6,7 +6,7 @@ import { Button } from "@nextui-org/react";
 
 export const FormContactUs = () => {
   return (
-    <div className="mt-8 bg-slate-200 p-3 rounded-lg border-1 border-black">
+    <div className="mt-8 bg-slate-200 p-3 rounded-lg border-1 border-black min-w-[370px] lg:h-fit lg:my-aut">
       <div>
         <h2>Déjanos un mensaje.</h2>
       </div>
@@ -17,10 +17,10 @@ export const FormContactUs = () => {
         label="Email"
         color="secondary"
         isClearable
-        // startContent= {
+        size="lg"
         // <AiOutlineUser className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
         // }
-        className=""
+        className="text-md"
       />
       <Input
         type="name"
@@ -29,6 +29,8 @@ export const FormContactUs = () => {
         label="Nombre"
         color="secondary"
         isClearable
+        size="lg"
+
         // startContent= {
         // <AiOutlineMail className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
         // }
@@ -41,7 +43,9 @@ export const FormContactUs = () => {
         color="secondary"
         placeholder="Ingrese su mensaje"
         description="Atenderemos su mensaje lo más pronto posible."
+        size="lg"
         className="max-w-xs mt-5"
+
       />
       <Button color="primary" variant="bordered"
       className="mt-8 hover:bg-black hover:text-white">

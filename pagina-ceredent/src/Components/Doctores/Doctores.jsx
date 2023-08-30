@@ -1,8 +1,8 @@
 import React from "react";
 import { FaUserMd } from "react-icons/fa";
 import { CardDoc } from "./CardDoc";
-import Dentista1 from "../../assets/dentista.png";
-import Dentista2 from "../../assets/dentista2.png";
+import Dentista1 from "../../assets/Dentistas/dentista.png";
+import Dentista2 from "../../assets/Dentistas/dentista2.png";
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 
 export const Doctores = () => {

@@ -9,7 +9,7 @@ import {
   NavbarMenuItem,
   Link,
 } from "@nextui-org/react";
-import LogoCeredentNav from "../../assets/CEREDENTcorteSinText.png";
+import LogoCeredentNav from "../../assets/Logo/CEREDENTcorteSinText.png";
 import "./navbarHome.css";
 import { MyButton } from "../../Hooks/MyButton";
 
@@ -104,7 +104,7 @@ const NavbarHome = () => {
                 as={Link}
                 size="md"
                 color="blue"
-                href="#contact"
+                href="#contacto"
                 variant="shadow"
                 className="w-auto text-xs"
               >

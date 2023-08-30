@@ -12,7 +12,7 @@ import {
 export const CartaContact = ({ id, medio, contacto, linkContacto, icono }) => {
   return (
     <div>
-      <Card key={id} className="max-w-[400px]">
+      <Card key={id} className="max-w-[500px] min-w-[370px]">
         <CardHeader className="flex justify-center gap-3">
           {icono}
           <div className="flex flex-col">

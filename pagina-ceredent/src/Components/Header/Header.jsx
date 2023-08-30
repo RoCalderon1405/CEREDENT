@@ -1,6 +1,6 @@
 import React from "react";
 import Familia from "../../assets/familia.png";
-import Ceredent from "../../assets/CEREDENT.jpeg";
+import Ceredent from "../../assets/Logo/CEREDENT.jpeg";
 import { LiaToothSolid } from "react-icons/lia";
 import { MyButton } from "../../Hooks/MyButton";
 import { Link } from "@nextui-org/react";
@@ -32,10 +32,10 @@ export const Header = () => {
 
   return (
     <>
-      <section id="header" className="h-screen">
+      <section id="header" className="">
         <div className="header__container py-0 pt-4 px-4 h-screen bg-center md:flex lg:flex">
           <div className="m-auto h-[30%] flex flex-col md:w-1/2 md:mt-auto md:ml-0 md:mr-0 md:h-auto lg:m-auto lg:w-1/2">
-            <div className="flex w-full mb-3 justify-center p-0 animation-scale">
+            <div className="flex w-fit mx-auto mb-3 justify-center p-0 animation-scale">
               <img
                 src={Ceredent}
                 alt="CEREDENT"
