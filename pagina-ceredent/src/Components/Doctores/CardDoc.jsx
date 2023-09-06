@@ -25,7 +25,7 @@ export const CardDoc = ({ id, nombre, nombreCompleto, about, img1, img2 }) => {
       <Card
         isFooterBlurred
         radius="lg"
-        className="border-none bg-red-700 w-[23rem] h-60 md:h-[15rem]"
+        className="border-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-200 via-gray-400 to-gray-600 w-[23rem] h-60 md:h-[15rem] transition ease-in duration-300 lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-110"
       >
         <Image
           alt="Woman listing to music"
@@ -33,7 +33,7 @@ export const CardDoc = ({ id, nombre, nombreCompleto, about, img1, img2 }) => {
           src={img1}
         />
         <CardFooter className="justify-between font-bold before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-          <p className="text-lg text-white/80">{nombre}</p>
+          <p className="text-xl font-extrabold text-white/80">{nombre}</p>
           <Button
             key={id}
             onPress={() => handleOpen(size)}
@@ -41,7 +41,7 @@ export const CardDoc = ({ id, nombre, nombreCompleto, about, img1, img2 }) => {
             color="default"
             radius="lg"
             size="sm"
-            className="text-tiny text-white bg-black/20"
+            className="text-sm font-bold text-white bg-black/20"
           >
             Sobre Mí
           </Button>

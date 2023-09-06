@@ -1,11 +1,11 @@
 import React from "react";
-import {Card, CardHeader, CardBody, CardFooter, Avatar, Button} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, Avatar} from "@nextui-org/react";
 import testimonio1 from "../../assets/Testimonios/testimonio1.jpg"
 
 export const CartaTestimonios = () => {
   return (
-    <div className="">
-      <Card className="max-w-[340px] m-auto overflow-hidden">
+    <div className="block w-full">
+      <Card className="md:max-w-[400px] h-full m-auto overflow-hidden">
         <CardHeader className="justify-between">
           <div className="flex gap-5">
             <Avatar
@@ -28,7 +28,7 @@ export const CartaTestimonios = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tenetur asperiores repellat vel vitae ad sunt veniam totam voluptatem autem?
           </p>
-          <span className="pt-2 flex mx-auto">
+          <span className="py-2 flex mx-auto">
           ⭐⭐⭐⭐⭐
           </span>
         </CardBody>

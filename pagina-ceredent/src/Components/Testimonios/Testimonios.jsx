@@ -1,5 +1,4 @@
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -8,7 +7,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import { FaUsers } from "react-icons/fa";
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
@@ -47,25 +46,6 @@ export const Testimonios = () => {
       }
     });
   };
-  const animateFadeRight = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add(
-          "animate-fade-right",
-          "animate-duration-1000",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-right",
-          "animate-duration-1000",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      }
-    });
-  };
   const animateFadeUp = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -92,26 +72,22 @@ export const Testimonios = () => {
   const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, {
     threshold: 0.8,
   });
-  const useAnimateFadeRight = useIntersectionObserver(animateFadeRight, {
-    threshold: 0.8,
-  });
   const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, {
     threshold: 0.8,
   });
 
- 
   return (
-    <section className="bg-white" id="testimonios">
-      <div className="container mx-auto py-10 lg:gap-10">
+    <section className="bg-white/90" id="testimonios">
+      <div className="container mx-auto py-[6rem]">
         <div className="flex flex-col items-center lg:justify-center md:w-[80%] m-auto">
           <h2
-            className="flex gap-4 text-5xl md:text-6xl font-black mb-4 text-blue-800 opacity-0"
+            className="flex gap-4 text-3xl md:text-4xl font-black mb-10 text-blue-800 opacity-0"
             ref={useAnimateFadeUp}
           >
-            Testimonios <FaUsers/>
+            Testimonios <FaUsers />
           </h2>
           <p
-            className="text-sm md:text-2xl md:text-center mt-1 mb-1 text-black opacity-0"
+            className="text-sm text-center md:text-lg mt-1 mb-6 text-black opacity-0"
             ref={useAnimateFadeLeft}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
@@ -120,25 +96,30 @@ export const Testimonios = () => {
           </p>
           <div className="line-animation"></div>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center w-[90%] mx-auto">
           <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
+            spaceBetween={30}
             centeredSlides={true}
-            slidesPerView={"auto"}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: false,
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
             }}
             pagination={{
               clickable: true,
             }}
-            modules={[EffectCoverflow, Pagination]}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
           >
+            <SwiperSlide>
+              <CartaTestimonios />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CartaTestimonios />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CartaTestimonios />
+            </SwiperSlide>
             <SwiperSlide>
               <CartaTestimonios />
             </SwiperSlide>

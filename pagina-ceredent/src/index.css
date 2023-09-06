@@ -5,7 +5,7 @@
 
 
 :root {
-  --color-bg: #00eeceb6;
+  --color-bg: rgba(254, 254, 255, 0.966);
   --color-bg-variant: #2c2c6c;
   --color-primary: #4db5ff;
   --color-primary-variant: rgba(77, 181, 255, 0.7);
@@ -46,13 +46,10 @@ body {
 
 /* GENERAL STYLES */
 
-section {
-  margin-bottom: .8rem;
-}
 
 .horizontal-line {
   border-top: 1px solid #ffffff; /* Color y grosor de la línea */
-  margin: 20px 0; /* Espacio arriba y abajo de la línea */
+  margin: 20px auto; /* Espacio arriba y abajo de la línea */
 }
 
 

@@ -70,7 +70,15 @@ export const Servicios = () => {
         entry.target.classList.add(
           "animate-fade-up",
           "animate-duration-1500",
-          "animate-ease-in-out"
+          "animate-ease-in-out",
+          "opacity:100"
+        );
+      } else {
+        entry.target.classList.remove(
+          "animate-fade-up",
+          "animate-duration-1500",
+          "animate-ease-in-out",
+          "opacity:100"
         );
       }
     });
@@ -95,22 +103,30 @@ export const Servicios = () => {
 
   // Crear instancias del hook de Intersection Observer
   const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, {
-    threshold: 0.5,
+    threshold: 0.1,
   });
   const useAnimateFadeRight = useIntersectionObserver(animateFadeRight, {
-    threshold: 0.5,
+    threshold: 0.1,
   });
   const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, {
-    threshold: 0.2,
+    threshold: 0.01,
   });
 
   return (
     <section className="bg-slate-300" id="servicios">
-      <div className="container m-auto py-10">
+      <div className="container m-auto py-[6rem]">
         <div>
-          <div>
-            <h2 ref={useAnimateFadeRight}>Nuestros Servicios</h2>
-            <p className="" ref={useAnimateFadeLeft}>
+          <div className="flex flex-col items-center w-full md:w-[60%] mx-auto lg:justify-center">
+            <h2
+              className="text-3xl md:text-4xl font-black mb-5 text-blue-800 opacity-0 mx-auto"
+              ref={useAnimateFadeRight}
+            >
+              Nuestros Servicios
+            </h2>
+            <p
+              className="text-md text-center mt-1 mb-4 text-black opacity-0 mx-0 md:text-lg"
+              ref={useAnimateFadeLeft}
+            >
               En nuestro consultorio dental, nos enorgullece ofrecer una amplia
               gama de servicios profesionales diseñados para atender todas tus
               necesidades dentales y de cuidado oral. Nuestro equipo altamente
@@ -124,7 +140,7 @@ export const Servicios = () => {
           <div className="line-animation"></div>
 
           <div
-            className="text-center mt-10 grid grid-cols-2 gap-5"
+            className="text-center mt-10 grid place-items-center w-[90%] mx-auto opacity-0 grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-5"
             ref={useAnimateFadeUp}
           >
             {servicios.map((servicio) => (

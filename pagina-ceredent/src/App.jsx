@@ -8,6 +8,8 @@ import { Footer } from "./Components/Footer/Footer";
 import { Trabajos } from "./Components/Trabajos/Trabajos";
 import { ContactUs } from "./Components/Contact/ContactUs";
 import { Testimonios } from "./Components/Testimonios/Testimonios";
+import { Tarjetas } from "./Components/Tarjetas/Tarjetas";
+import { Historia } from "./Components/Historia/Historia";
 
 function App() {
   return (
@@ -15,8 +17,10 @@ function App() {
       <NavbarHome/>
       <Header />
       <About/>
+      <Historia/>
       <Doctores/>
       <Servicios/>
+      <Tarjetas/>
       <Trabajos/>
       <Testimonios/>
       <ContactUs/>

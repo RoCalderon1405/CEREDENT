@@ -4,7 +4,7 @@ import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
 export const CartaServicios = ({id, title, img, descipcion}) => {
   return (
-    <div className="flex gap-10 mb-6">
+    <div className="flex gap-10 mb-6 min-w-[200px] max-w-[200px]">
         <Card
           shadow="sm"
           key={id}

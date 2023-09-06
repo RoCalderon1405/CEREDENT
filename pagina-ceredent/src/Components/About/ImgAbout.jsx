@@ -1,12 +1,15 @@
 import React from "react";
 
-export const ImgAbout = ({ id, imagen, description }) => {
+export const ImgAbout = ({ id, imagen, description, efecto }) => {
   return (
-    <img
+    <div className="lg:opacity-80 ease-in duration-300 hover:opacity-100 hover:scale-110">
+      <img
       key={id}
       src={imagen}
       alt={description}
+      // ref={efecto}
       className="rounded-lg w-full"
     />
+    </div>
   );
 };
