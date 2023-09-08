@@ -4,7 +4,7 @@ import testimonio1 from "../../assets/Testimonios/testimonio1.jpg"
 
 export const CartaTestimonios = () => {
   return (
-    <div className="block w-full">
+    <div className="block p-5">
       <Card className="md:max-w-[400px] h-full m-auto overflow-hidden">
         <CardHeader className="justify-between">
           <div className="flex gap-5">
@@ -28,7 +28,7 @@ export const CartaTestimonios = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tenetur asperiores repellat vel vitae ad sunt veniam totam voluptatem autem?
           </p>
-          <span className="py-2 flex mx-auto">
+          <span className="py-2 flex mt-auto mx-auto">
           ⭐⭐⭐⭐⭐
           </span>
         </CardBody>

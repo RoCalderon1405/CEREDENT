@@ -25,7 +25,7 @@ export const CardDoc = ({ id, nombre, nombreCompleto, about, img1, img2 }) => {
       <Card
         isFooterBlurred
         radius="lg"
-        className="border-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-200 via-gray-400 to-gray-600 w-[23rem] h-60 md:h-[15rem] transition ease-in duration-300 lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-110"
+        className="border-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-200 via-gray-400 to-gray-600 w-[23rem] h-60 md:h-[15rem] transition-all ease-in duration-300 lg:opacity-90 lg:hover:opacity-100 lg:hover:scale-110"
       >
         <Image
           alt="Woman listing to music"

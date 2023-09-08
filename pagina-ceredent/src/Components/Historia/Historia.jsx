@@ -80,7 +80,7 @@ export const Historia = () => {
   });
 
   return (
-    <section id="historia" className="bg-slate-200 py-8">
+    <section id="historia" className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100 py-8">
       <div className="mx-auto py-[2rem] md:py-[5rem] lg:gap-10">
         <div className="flex flex-col items-center w-[80%] md:w-[70%] lg:w-[55%] mx-auto lg:justify-center">
           <h2

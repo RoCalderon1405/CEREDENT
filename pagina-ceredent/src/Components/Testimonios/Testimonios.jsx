@@ -77,7 +77,7 @@ export const Testimonios = () => {
   });
 
   return (
-    <section className="bg-white/90" id="testimonios">
+    <section className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100" id="testimonios">
       <div className="container mx-auto py-[6rem]">
         <div className="flex flex-col items-center lg:justify-center md:w-[80%] m-auto">
           <h2
@@ -96,13 +96,13 @@ export const Testimonios = () => {
           </p>
           <div className="line-animation"></div>
         </div>
-        <div className="flex flex-col items-center w-[90%] mx-auto">
+        <div className="flex flex-col items-center w-full mx-auto">
           <Swiper
-            spaceBetween={30}
+            spaceBetween={40}
             centeredSlides={true}
             autoplay={{
               delay: 4000,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
             }}
             pagination={{
               clickable: true,

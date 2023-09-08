@@ -5,7 +5,7 @@
 
 
 :root {
-  --color-bg: rgba(254, 254, 255, 0.966);
+  --color-bg: rgba(254, 254, 255, 0.666);
   --color-bg-variant: #2c2c6c;
   --color-primary: #4db5ff;
   --color-primary-variant: rgba(77, 181, 255, 0.7);
@@ -25,7 +25,8 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
+  background-color: rgba(146, 194, 196, 0.795);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -34,7 +35,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #0e686e;
+  background-color: #0d1c61d7;
 }
 
 body {

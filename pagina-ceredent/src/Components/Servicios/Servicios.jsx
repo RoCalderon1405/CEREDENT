@@ -12,45 +12,52 @@ export const Servicios = () => {
   const servicios = [
     {
       id: 1,
-      title: "Blanquemiento",
+      title: "Odontología estética",
       img: cuidadoDental,
       descripcion:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde, tempore hic ea porro",
+        "Mejora la apariencia dental con procedimientos como blanqueamiento y carillas.",
     },
     {
       id: 2,
-      title: "Prótesis Dental",
+      title: "Odontopediatría",
       img: protesico,
       descripcion:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde, tempore hic ea porro",
+        "Cuidado dental especializado para niños.",
     },
     {
       id: 3,
-      title: "Prótesis Dental",
+      title: "Cirugía bucal",
       img: cepilloDiente,
       descripcion:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde, tempore hic ea porro",
+        "Procedimientos quirúrgicos en la boca, incluyendo extracciones y colocación de implantes.",
     },
     {
       id: 4,
       title: "Prótesis Dental",
       img: radiografia,
       descripcion:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde, tempore hic ea porro",
+        "Restauración de dientes perdidos con prótesis removibles o fijas.",
     },
     {
       id: 5,
-      title: "Prótesis Dental",
+      title: "Periodoncia",
       img: corona,
       descripcion:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde, tempore hic ea porro",
+        "Tratamiento de enfermedades de las encías y tejidos que sostienen los dientes.",
     },
     {
       id: 6,
-      title: "Prótesis Dental",
+      title: "Ortodoncia",
       img: extraccion,
       descripcion:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde, tempore hic ea porro",
+        "Corrección de la posición de los dientes y la mandíbula para mejorar la mordida y estética facial.",
+    },
+    {
+      id: 7,
+      title: "Endodoncia",
+      img: extraccion,
+      descripcion:
+        "Tratamiento de conductos radiculares para salvar dientes dañados o infectados.",
     },
   ];
 
@@ -113,7 +120,7 @@ export const Servicios = () => {
   });
 
   return (
-    <section className="bg-slate-300" id="servicios">
+    <section className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100" id="servicios">
       <div className="container m-auto py-[6rem]">
         <div>
           <div className="flex flex-col items-center w-full md:w-[60%] mx-auto lg:justify-center">
@@ -140,7 +147,7 @@ export const Servicios = () => {
           <div className="line-animation"></div>
 
           <div
-            className="text-center mt-10 grid place-items-center w-[90%] mx-auto opacity-0 grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-5"
+            className="text-center mt-10 grid place-items-center w-[90%] mx-auto opacity-0 grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4"
             ref={useAnimateFadeUp}
           >
             {servicios.map((servicio) => (
@@ -149,7 +156,7 @@ export const Servicios = () => {
                 id={servicio.id}
                 title={servicio.title}
                 img={servicio.img}
-                descipcion={servicio.descripcion}
+                descripcion={servicio.descripcion}
               />
             ))}
           </div>

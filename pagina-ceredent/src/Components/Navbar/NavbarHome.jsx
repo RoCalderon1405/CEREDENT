@@ -27,33 +27,37 @@ import {
 } from "react-icons/fa";
 import "./navbarHome.css";
 
-const NavbarHome = () => {
+export const NavbarHome = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const dentalServices = [
     {
-      icon: <FaTooth className="text-violet-400" />,
-      title: "Ortodoncia",
+      icon: <FaTooth className="text-gray-400" />,
+      title: "Odontología estética",
     },
     {
-      icon: <FaTooth className="text-violet-400" />,
-      title: "Implantes Dentales",
+      icon: <FaTooth className="text-gray-400" />,
+      title: "Odontopediatría",
     },
     {
-      icon: <FaTooth className="text-violet-400" />,
-      title: "Blanqueamiento Dental",
+      icon: <FaTooth className="text-gray-400" />,
+      title: "Cirugía bucal",
     },
     {
-      icon: <FaTooth className="text-violet-400" />,
-      title: "Endodoncia1",
+      icon: <FaTooth className="text-gray-400" />,
+      title: "Prótesis dentales",
     },
     {
-      icon: <FaTooth className="text-violet-400" />,
-      title: "Endodoncia2",
+      icon: <FaTooth className="text-gray-400" />,
+      title: "Periodoncias",
     },
     {
-      icon: <FaTooth className="text-violet-400" />,
-      title: "Endodoncia3",
+      icon: <FaTooth className="text-gray-400" />,
+      title: "Ortodoncias",
+    },
+    {
+      icon: <FaTooth className="text-gray-400" />,
+      title: "Endodoncias",
     },
   ];
 
@@ -115,7 +119,7 @@ const NavbarHome = () => {
               Nuestros Doctores
             </Link>
           </NavbarItem>
-          <Dropdown backdrop="blur">
+          <Dropdown backdrop="blur" size="sm">
             <NavbarItem>
               <DropdownTrigger>
                 <Button
@@ -138,10 +142,11 @@ const NavbarHome = () => {
               </DropdownTrigger>
             </NavbarItem>
             <DropdownMenu
-              className="w-[340px]"
+              className="w-[230px]"
               itemClasses={{
-                base: "gap-4",
+                base: "gap-3",
               }}
+              variant="shadow"
             >
               {dentalServices.map((service) => (
                 <DropdownItem
@@ -287,4 +292,4 @@ const NavbarHome = () => {
   );
 };
 
-export default NavbarHome;
+

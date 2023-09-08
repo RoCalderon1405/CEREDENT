@@ -68,17 +68,6 @@ export const Header = () => {
               </Link>
             </div>
           </div>
-          {/* <div
-            className="h-[70%] flex items-center justify-center w-full overflow-hidden md:w-1/2 md:m-auto md:h-[90%] lg:w-1/2 lg:mt-0"
-            ref={useAnimateFadeUp}
-          >
-            <img
-              src={Familia}
-              alt="Famila"
-              id="imgFamilia"
-              className="w-auto h-full md:w-full md:min-w-[510px] lg:w-max opacity-0"
-            />
-          </div> */}
         </div>
         <div className="absolute top-0 bottom-0 object-cover w-screen h-full overflow-hidden z-[1]">
           <video

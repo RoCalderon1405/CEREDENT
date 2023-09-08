@@ -37,7 +37,7 @@ export const CartaContact = ({
           showAnchorIcon 
           target="_blank" 
           href={linkContacto} 
-          className="text-xl p-1 hover:text-black hover:font-bolder"
+          className="text-xl p-1 font-semibold text-sky-600 lg:hover:text-black lg:hover:font-bolder transition-all ease-in duration-400"
           >
             ¡Contáctame!
           </Link>
