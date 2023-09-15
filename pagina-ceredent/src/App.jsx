@@ -10,6 +10,7 @@ import { ContactUs } from "./Components/Contact/ContactUs";
 import { Testimonios } from "./Components/Testimonios/Testimonios";
 import { Tarjetas } from "./Components/Tarjetas/Tarjetas";
 import { Historia } from "./Components/Historia/Historia";
+import { OdontologiaEstetica } from "./Components/Servicios/Routes/OdontoEstetica";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Historia/>
       <Doctores/>
       <Servicios/>
+      <OdontologiaEstetica/>
       <Tarjetas/>
       <Trabajos/>
       <Testimonios/>
