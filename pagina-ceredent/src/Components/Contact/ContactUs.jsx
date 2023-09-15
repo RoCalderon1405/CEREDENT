@@ -141,7 +141,7 @@ export const ContactUs = () => {
           <div className="line-animation"></div>
         </div>
         <div className="flex flex-col my-10 lg:grid lg:grid-cols-2">
-          <div className="flex flex-col gap-5 items-center mx-auto w-full mt-10">
+          <div className="flex flex-col gap-10 items-center mx-auto w-full mt-10">
             {contactos.map((item) => (
               <CartaContact
                 key={item.contactoId}

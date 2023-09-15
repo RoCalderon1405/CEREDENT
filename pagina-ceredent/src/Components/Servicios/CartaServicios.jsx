@@ -9,7 +9,7 @@ import {
 } from "@nextui-org/react";
 // https://www.flaticon.es/iconos-gratis/dental
 
-export const CartaServicios = ({ id, title, img, descripcion }) => {
+export const CartaServicios = ({ id, title, img, descripcion, ruta }) => {
   return (
     <div className="flex gap-10 mb-6 min-w-[200px] max-w-[260px]">
       <Card shadow="sm" key={id} >
@@ -27,7 +27,7 @@ export const CartaServicios = ({ id, title, img, descripcion }) => {
         <CardFooter className="text-small flex flex-col">
           <h5 className="text-lg font-semibold">{title}</h5>
           <p className="text-default-500">{descripcion}</p>
-          <Link href="#aboutUs" className="lg:hover:opacity-100">
+          <Link href={ruta} className="lg:hover:opacity-100">
             <Button className="mt-3 font-semibold text-md bg-blue-600 text-white rounded-full lg:hover:bg-blue-700 lg:hover:scale-105 transition-all ease-in-out">
               Saber más
             </Button>

@@ -40,7 +40,7 @@
 }
 
 .line-animation {
-  width: 100%;
+  width: 60%;
   height: 5px;
   background: rgb(134, 34, 195);
   background: linear-gradient(
@@ -54,19 +54,19 @@
 
 @keyframes barWidth {
   0% {
-    width: 0%;
+    width: 5%;
   }
   25% {
-    width: 25%;
+    width: 10%;
   }
   50% {
-    width: 50%;
+    width: 15%;
   }
   75% {
-    width: 25%;
+    width: 10%;
   }
   100% {
-    width: 0%;
+    width: 5%;
   }
 }
 

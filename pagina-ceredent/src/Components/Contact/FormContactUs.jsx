@@ -59,7 +59,7 @@ export const FormContactUs = () => {
     e.target.reset();
   };
   return (
-    <div className="mt-8 bg-slate-300 p-3 rounded-lg border-1 w-full min-w-[200px] lg:h-fit">
+    <div className="mt-8 mx-auto bg-slate-300 p-3 rounded-lg border-2 border-black/70 min-w-[200px] shadow-[0_1px_35px_rgba(55,102,255,0.6)]  lg:h-fit z-[10]">
       <div className="flex flex-col items-center">
         <h2 className="font-bold text-lg text-blue-800">
           Ponte en contácto con nuestros expertos.

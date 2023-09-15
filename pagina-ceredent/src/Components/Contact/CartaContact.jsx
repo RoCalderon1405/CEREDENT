@@ -18,10 +18,10 @@ export const CartaContact = ({
   icono,
 }) => {
   return (
-    <div>
-      <Card key={id} className={`max-w-[500px] min-w-[370px] ${cardColor}`}>
+    <div className="">
+      <Card key={id} className={`max-w-[500px] min-w-[370px] ${cardColor} border-3 border-black/70 shadow-[0_1px_35px_rgba(55,102,255,0.6)]`}>
         <CardHeader className="flex justify-center gap-3 text-2xl font-bold">
-          <div className="text-cyan-500">{icono}</div>
+          <div className="text-cyan-500 font-bold">{icono}</div>
           <div className="flex flex-col">
             <p className="text-md">{medio}</p>
           </div>

@@ -171,7 +171,7 @@ export const About = () => {
         </div>
 
         <div className="mt-[5rem]">
-          <div className="grid w-[90%] md:w-[65%] mx-auto gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+          <div className="grid w-[90%] md:w-[65%] mx-auto gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
             {Imgs.map((item) => (
               <ImgAbout
                 key={item.id}
@@ -191,26 +191,15 @@ export const About = () => {
               {sections.map((section) => (
                 <div
                   key={section.id}
-                  className="p-4 bg-blue-200 rounded-lg shadow-md text-center ease-in duration-300 lg:hover:scale-110"
+                  className="p-4 bg-blue-200 rounded-lg mt-8 text-center ease-in duration-300 border-5 border-sky-400 shadow-[0_1px_35px_rgba(55,102,255,0.6)] md:ml-5 lg:hover:scale-105"
                 >
                   <FaTooth size={40} className="text-green-500 mb-2" />
-                  <h3 className="text-xl font-semibold">{section.title}</h3>
+                  <h3 className="text-xl font-semibold text-blue-600">{section.title}</h3>
                   <p className="text-gray-700">{section.description}</p>
                 </div>
               ))}
             </div>
           </div>
-          {/* <div className="w-[15rem] m-auto mt-10">
-            <Button
-              variant="ghost"
-              size="lg"
-              endContent={<BsCalendar2Date className="text-4xl text-" />}
-              className="font-bold text-md text-slate-600 border-blue-700 bg-sky-300  hover:scale-110 hover:bg-blue-800 hover:border-sky-400 hover:text-blue-900 opacity-0"
-              ref={useAnimateButtonFadeUp}
-            >
-              Agenda una cita
-            </Button>
-          </div> */}
         </div>
       </div>
     </section>

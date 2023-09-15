@@ -16,13 +16,14 @@ export const Servicios = () => {
       img: cuidadoDental,
       descripcion:
         "Mejora la apariencia dental con procedimientos como blanqueamiento y carillas.",
+      ruta: "servicios/odontologia-estetica",
     },
     {
       id: 2,
       title: "Odontopediatría",
       img: protesico,
-      descripcion:
-        "Cuidado dental especializado para niños.",
+      descripcion: "Cuidado dental especializado para niños.",
+      ruta: "servicios/odontologia-estetica",
     },
     {
       id: 3,
@@ -30,6 +31,7 @@ export const Servicios = () => {
       img: cepilloDiente,
       descripcion:
         "Procedimientos quirúrgicos en la boca, incluyendo extracciones y colocación de implantes.",
+      ruta: "servicios/odontologia-estetica",
     },
     {
       id: 4,
@@ -37,6 +39,7 @@ export const Servicios = () => {
       img: radiografia,
       descripcion:
         "Restauración de dientes perdidos con prótesis removibles o fijas.",
+      ruta: "servicios/odontologia-estetica",
     },
     {
       id: 5,
@@ -44,6 +47,7 @@ export const Servicios = () => {
       img: corona,
       descripcion:
         "Tratamiento de enfermedades de las encías y tejidos que sostienen los dientes.",
+      ruta: "servicios/odontologia-estetica",
     },
     {
       id: 6,
@@ -51,6 +55,7 @@ export const Servicios = () => {
       img: extraccion,
       descripcion:
         "Corrección de la posición de los dientes y la mandíbula para mejorar la mordida y estética facial.",
+      ruta: "servicios/odontologia-estetica",
     },
     {
       id: 7,
@@ -58,6 +63,7 @@ export const Servicios = () => {
       img: extraccion,
       descripcion:
         "Tratamiento de conductos radiculares para salvar dientes dañados o infectados.",
+      ruta: "servicios/odontologia-estetica",
     },
   ];
 
@@ -120,7 +126,10 @@ export const Servicios = () => {
   });
 
   return (
-    <section className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100" id="servicios">
+    <section
+      className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100"
+      id="servicios"
+    >
       <div className="container m-auto py-[6rem]">
         <div>
           <div className="flex flex-col items-center w-full md:w-[60%] mx-auto lg:justify-center">
@@ -157,6 +166,7 @@ export const Servicios = () => {
                 title={servicio.title}
                 img={servicio.img}
                 descripcion={servicio.descripcion}
+                ruta={servicio.ruta}
               />
             ))}
           </div>

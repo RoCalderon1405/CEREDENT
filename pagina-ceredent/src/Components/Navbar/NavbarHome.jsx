@@ -11,9 +11,9 @@ import {
   DropdownTrigger,
   Dropdown,
   DropdownMenu,
-  Link,
   Button,
 } from "@nextui-org/react";
+import { Link } from "react-router-dom";
 import LogoCeredentNav from "../../assets/Logo/CEREDENTcorteSinText.png";
 import { MyButton } from "../../Hooks/MyButton";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
@@ -34,30 +34,37 @@ export const NavbarHome = () => {
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Odontología estética",
+      ruta: "/servicios/odontologia-estetica",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Odontopediatría",
+      ruta: "/servicios/odontologia-estetica",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Cirugía bucal",
+      ruta: "/servicios/odontologia-estetica",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Prótesis dentales",
+      ruta: "/servicios/odontologia-estetica",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Periodoncias",
+      ruta: "/servicios/odontologia-estetica",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Ortodoncias",
+      ruta: "/servicios/odontologia-estetica",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Endodoncias",
+      ruta: "/servicios/odontologia-estetica",
     },
   ];
 
@@ -101,45 +108,61 @@ export const NavbarHome = () => {
           justify="center"
         >
           <NavbarItem>
-            <Link
-              color="foreground"
-              href="#aboutUs"
-              fontSize="large"
-              className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
-            >
-              ¿Quiénes Somos?
-            </Link>
+            <div className="flex items-center">
+              <Link
+                color="foreground"
+                to="/#"
+                fontSize="large"
+                className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
+              >
+                Inicio
+              </Link>
+            </div>
           </NavbarItem>
-          <NavbarItem isActive>
-            <Link
-              href="#doctores"
-              aria-current="page"
-              className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
-            >
-              Nuestros Doctores
-            </Link>
+          <NavbarItem>
+            <div className="flex items-center">
+              <Link
+                color="foreground"
+                to="/#aboutUs"
+                fontSize="large"
+                className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
+              >
+                ¿Quiénes Somos?
+              </Link>
+            </div>
+          </NavbarItem>
+          <NavbarItem>
+            <div className="flex items-center">
+              <Link
+                to="/#doctores"
+                aria-current="page"
+                className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
+              >
+                Nuestros Doctores
+              </Link>
+            </div>
           </NavbarItem>
           <Dropdown backdrop="blur" size="sm">
             <NavbarItem>
-              <DropdownTrigger>
-                <Button
-                  disableRipple
-                  className="p-0 gap-0 bg-transparent data-[hover=true]:bg-transparent overflow-visible "
-                  radius="sm"
-                  variant="light"
-                  endContent={
-                    <MdOutlineKeyboardArrowDown className="hover:text-blue-600 text-5xl" />
-                  }
+              <div className="flex items-center">
+                <Link
+                  color="foreground"
+                  to="/#servicios"
+                  // href="#servicios"
+                  className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
                 >
-                  <Link
-                    color="foreground"
-                    href="#servicios"
-                    className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
-                  >
-                    Servicios
-                  </Link>
-                </Button>
-              </DropdownTrigger>
+                  Servicios
+                </Link>
+                <DropdownTrigger>
+                  <Button
+                    size="sm"
+                    className="p-0 gap-0 bg-transparent min-w-[1px] h-[18px] data-[hover=true]:bg-transparent overflow-visible justify-start "
+                    endContent={
+                      <MdOutlineKeyboardArrowDown className="hover:text-blue-600 text-5xl" />
+                    }
+                  ></Button>
+                </DropdownTrigger>
+              </div>
             </NavbarItem>
             <DropdownMenu
               className="w-[230px]"
@@ -154,28 +177,33 @@ export const NavbarHome = () => {
                   description={service.description}
                   startContent={service.icon}
                 >
-                  {service.title}
+                  <Link to={service.ruta}>{service.title}</Link>
                 </DropdownItem>
               ))}
             </DropdownMenu>
           </Dropdown>
           <NavbarItem>
-            <Link
-              color="foreground"
-              href="#trabajos"
-              className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
-            >
-              Laboratorio Dental
-            </Link>
+            <div className="flex items-center">
+              <Link
+                color="foreground"
+                // to="/#trabajos"
+                href="/#trabajos"
+                className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
+              >
+                Laboratorio Dental
+              </Link>
+            </div>
           </NavbarItem>
           <NavbarItem>
-            <Link
-              color="foreground"
-              href="#testimonios"
-              className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
-            >
-              Testimonios
-            </Link>
+            <div className="flex items-center">
+              <Link
+                color="foreground"
+                to="/#testimonios"
+                className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
+              >
+                Testimonios
+              </Link>
+            </div>
           </NavbarItem>
         </NavbarContent>
 
@@ -185,7 +213,7 @@ export const NavbarHome = () => {
               as={Link}
               size="md"
               color="blue"
-              href="#contacto"
+              to="/#contacto"
               variant="shadow"
               className="w-auto text-xs transition duration-300 ease-out lg:hover:bg-sky-500 lg:hover:scale-110 lg:hover:text-black lg:hover:font-extrabold	"
             >
@@ -194,13 +222,16 @@ export const NavbarHome = () => {
           </NavbarItem>
         </NavbarContent>
 
+        {/* Dispositivos Móviles */}
         <NavbarMenu>
           <NavbarMenuItem>
             <Button
               className="bg-transparent my-5 p-1"
-              startContent={<AiFillHome className="text-5xl text-sky-500 items-bottom" />}
+              startContent={
+                <AiFillHome className="text-5xl text-sky-500 items-bottom" />
+              }
             >
-              <Link className="w-full font-bold text-xl text-blue-600" href="#">
+              <Link className="w-full font-bold text-xl text-blue-600" to="/#">
                 Inicio
               </Link>
             </Button>
@@ -208,11 +239,11 @@ export const NavbarHome = () => {
           <NavbarMenuItem>
             <Button
               className="bg-transparent my-5 p-1"
-              startContent={<FaUser className="text-4xl text-sky-500" />}
+              startContent={<FaUser className="text-3xl text-sky-500" />}
             >
               <Link
                 className="w-full font-medium text-xl text-black/80"
-                href="#aboutUs"
+                to="/#aboutUs"
               >
                 ¿Quiénes Somos?
               </Link>
@@ -221,11 +252,11 @@ export const NavbarHome = () => {
           <NavbarMenuItem>
             <Button
               className="bg- my-5 p-1"
-              startContent={<FaUserMd className="text-5xl text-sky-500" />}
+              startContent={<FaUserMd className="text-3xl text-sky-500" />}
             >
               <Link
                 className="w-full font-medium text-xl text-black/80"
-                href="#doctores"
+                to="/#doctores"
               >
                 Nuestros Doctores
               </Link>
@@ -238,11 +269,11 @@ export const NavbarHome = () => {
               className="my-5 p-1 data-[hover=true]:bg-transparent overflow-visible "
               radius="sm"
               variant="light"
-              startContent={<FaTooth className="text-5xl text-sky-500" />}
+              startContent={<FaTooth className="text-3xl text-sky-500" />}
             >
               <Link
                 className="w-full font-medium text-xl text-black/80"
-                href="#servicios"
+                to="/#servicios"
               >
                 Servicios
               </Link>
@@ -255,7 +286,7 @@ export const NavbarHome = () => {
                 className="flex items-center space-x-2 mb-3 p-1"
               >
                 <span className="">{service.icon}</span>
-                <Link>{service.title}</Link>
+                <Link to={service.ruta}>{service.title}</Link>
               </div>
             ))}
           </div>
@@ -263,11 +294,11 @@ export const NavbarHome = () => {
           <NavbarMenuItem>
             <Button
               className="bg-transparent my-5 p-1"
-              startContent={<FaBriefcase className="text-5xl text-sky-500" />}
+              startContent={<FaBriefcase className="text-3xl text-sky-500" />}
             >
               <Link
                 className="w-full font-medium text-xl text-black/80"
-                href="#trabajos"
+                to="/#trabajos"
               >
                 Laboratorio Dental
               </Link>
@@ -280,7 +311,7 @@ export const NavbarHome = () => {
             >
               <Link
                 className="w-full font-medium text-xl text-black/80"
-                href="#testimonios"
+                to="/#testimonios"
               >
                 Testimonios
               </Link>
@@ -291,5 +322,3 @@ export const NavbarHome = () => {
     </>
   );
 };
-
-

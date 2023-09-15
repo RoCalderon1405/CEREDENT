@@ -1,6 +1,7 @@
 import React from "react";
 import { Parallax } from "react-parallax";
 import TarjetasImg from "../../assets/Tarjetas/equipoDental.jpg";
+import "./tarjetas.css";
 
 export const Tarjetas = () => {
   const insideStyles = {
@@ -9,24 +10,19 @@ export const Tarjetas = () => {
     position: "absolute",
     top: "50%",
     left: "50%",
-    transform: "translate(-50%, -50%)", // Ajuste en la transformación para centrar horizontalmente y verticalmente
+    transform: "translate(-50%, -50%)",
   };
 
   return (
-    <section className="relative h-screen" id="tarjetas">
-      <div className="h-full">
-        <Parallax
-          bgImage={TarjetasImg}
-          strength={400}
-          className="absolute object-cover object-center w-full h-full"
-        >
-          <div className="h-screen flex justify-center items-center">
-            <div style={insideStyles}>
-              <h2>ACEPTAMOS PAGOS</h2>
-              <p>con tarjetas de crédito y débito</p>
-            </div>
+    <section className="tarjetas-container">
+      <div className="tarjetas-bg" style={{ backgroundImage: `url(${TarjetasImg})` }}>
+        <div className="tarjetas-content font-bold">
+          <h2>ACEPTAMOS PAGOS</h2>
+          <p>con tarjetas de crédito y débito</p>
+          <div>
+            
           </div>
-        </Parallax>
+        </div>
       </div>
     </section>
   );

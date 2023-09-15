@@ -70,10 +70,10 @@ export const Testimonios = () => {
 
   // Crear instancias del hook de Intersection Observer
   const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, {
-    threshold: 0.8,
+    threshold: 0.1,
   });
   const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, {
-    threshold: 0.8,
+    threshold: 0.1,
   });
 
   return (
