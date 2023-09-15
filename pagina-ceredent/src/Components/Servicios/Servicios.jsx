@@ -127,7 +127,7 @@ export const Servicios = () => {
 
   return (
     <section
-      className="bg-[#2A2A2A]"
+      className="bg-gradient-to-t from-[#2A2A2A] to-[#191645] "
       id="servicios"
     >
       <div className="container m-auto py-[6rem]">

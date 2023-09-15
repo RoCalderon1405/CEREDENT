@@ -150,17 +150,17 @@ export const About = () => {
   });
 
   return (
-    <section id="aboutUs" className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100 py-8">
+    <section id="aboutUs" className="bg-gradient-to-t from-[#2A2A2A] to-[#191645] py-8">
       <div className=" mx-auto py-[5rem] lg:gap-10">
         <div className="flex flex-col items-center w-[80%] md:w-[55%] mx-auto lg:justify-center">
           <h2
-            className="text-4xl md:text-5xl font-black mb-5 text-blue-800 opacity-0 mx-auto"
+            className="text-4xl md:text-5xl font-black mb-5 text-white opacity-0 mx-auto"
             ref={useAnimateFadeUp}
           >
-            Conócenos 👋
+            Conócenos
           </h2>
           <p
-            className="text-md text-center mt-1 mb-4 text-black opacity-0 mx-0 md:text-md "
+            className="text-md text-center mt-1 mb-4 text-white/80 opacity-0 mx-0 md:text-md "
             ref={useAnimateFadeLeft}
           >
             En CEREDENT, estamos comprometidos a brindar atención dental de alta
@@ -191,11 +191,11 @@ export const About = () => {
               {sections.map((section) => (
                 <div
                   key={section.id}
-                  className="p-4 bg-blue-200 rounded-lg mt-8 text-center ease-in duration-300 border-5 border-sky-400 shadow-[0_1px_4px_rgba(255,0,0,0.3)] md:ml-5 lg:hover:scale-105"
+                  className="p-4 bg-[#2A2A2A] rounded-lg mt-8 text-center ease-in duration-300 border-3 border-[#43C6AC] shadow-[0px_10px_30px_rgba(55,102,255,0.4)] md:ml-5 lg:hover:scale-105"
                 >
-                  <FaTooth size={40} className="text-green-500 mb-2" />
-                  <h3 className="text-xl font-semibold text-blue-600">{section.title}</h3>
-                  <p className="text-gray-700">{section.description}</p>
+                  <FaTooth size={40} className="text-[#43C6AC] mb-2" />
+                  <h3 className="text-xl font-semibold text-white">{section.title}</h3>
+                  <p className="text-white/80 mt-3">{section.description}</p>
                 </div>
               ))}
             </div>
