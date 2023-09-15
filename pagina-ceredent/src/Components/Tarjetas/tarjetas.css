@@ -15,16 +15,14 @@
     transform: scale(1.1) ; /* Ajusta el factor de escala según tus necesidades */
   }
   
-  .tarjetas-bg img {
-    transform: translateY(20%); /* Ajusta el valor según tus necesidades */
-  }
   
   .tarjetas-content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -300%);
+    transform: translate(-50%, -40%);
     text-align: center;
     color: #fff; /* Color del texto */
+    width: 100%;
   }
   

@@ -111,7 +111,7 @@ export const NavbarHome = () => {
             <div className="flex items-center">
               <Link
                 color="foreground"
-                to="/#"
+                to="/#testimonios"
                 fontSize="large"
                 className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
               >
