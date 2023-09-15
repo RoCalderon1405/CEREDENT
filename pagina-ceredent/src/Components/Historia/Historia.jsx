@@ -80,17 +80,17 @@ export const Historia = () => {
   });
 
   return (
-    <section id="historia" className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100 py-8">
+    <section id="historia" className="bg-[#191645] py-8">
       <div className="mx-auto py-[2rem] md:py-[5rem] lg:gap-10">
         <div className="flex flex-col items-center w-[80%] md:w-[70%] lg:w-[55%] mx-auto lg:justify-center">
           <h2
-            className="text-3xl md:text-5xl font-black mb-5 text-blue-800 opacity-0 mx-auto"
+            className="text-3xl md:text-5xl font-black mb-5 text-white opacity-0 mx-auto"
             ref={useAnimateFadeUp}
           >
-            Nuestra Historia 🕰️
+            Nuestra Historia
           </h2>
           <p
-            className="text-md text-center mt-1 mb-4 text-black mx-0 md:text-md opacity-0"
+            className="text-md text-center mt-1 mb-4 text-white/80 mx-0 md:text-md opacity-0"
             ref={useAnimateFadeLeft}
           >
             CEREDENT es un negocio familiar con más de 20 años de experiencia en
@@ -102,17 +102,22 @@ export const Historia = () => {
 
         <div className="mt-[3rem] md:mt-[5rem]">
           <div className="grid w-[80%] mx-auto gap-3 md:grid-cols-2 md:w-[80%]">
-            <div className="p-4 rounded-lg shadow-md opacity-0" ref={useAnimateFade}>
+            <div
+              className="p-4 rounded-lg border-2 border-white/20 shadow-[0_1px_35px_rgba(47,178,152,0.35)] opacity-0"
+              ref={useAnimateFade}
+            >
               <img
                 src={CeredentHistoryImg}
                 alt="CEREDENT History"
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full rounded-lg"
               />
             </div>
             <div className="p-4 text-center">
-              <FaTooth size={40} className="text-green-500 mb-2" />
-              <h3 className="text-xl font-semibold">Nuestra Trayectoria</h3>
-              <p className="text-gray-700">
+              <FaTooth size={40} className="text-[#43C6AC] mb-2" />
+              <h3 className="text-xl font-semibold text-white mb-5">
+                Nuestra Trayectoria
+              </h3>
+              <p className="text-white/80">
                 Durante más de dos décadas, CEREDENT ha estado brindando
                 atención dental de calidad y cuidado personalizado a nuestros
                 pacientes. Con un equipo de profesionales apasionados, hemos

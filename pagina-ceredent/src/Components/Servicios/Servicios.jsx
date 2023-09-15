@@ -127,20 +127,20 @@ export const Servicios = () => {
 
   return (
     <section
-      className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100"
+      className="bg-[#2A2A2A]"
       id="servicios"
     >
       <div className="container m-auto py-[6rem]">
         <div>
           <div className="flex flex-col items-center w-full md:w-[60%] mx-auto lg:justify-center">
             <h2
-              className="text-3xl md:text-4xl font-black mb-5 text-blue-800 opacity-0 mx-auto"
+              className="text-3xl text-white md:text-4xl font-black mb-5 opacity-0 mx-auto"
               ref={useAnimateFadeRight}
             >
               Nuestros Servicios
             </h2>
             <p
-              className="text-md text-center mt-1 mb-4 text-black opacity-0 mx-0 md:text-lg"
+              className="text-md text-center mt-1 mb-4 text-white/80 opacity-0 mx-0 md:text-lg"
               ref={useAnimateFadeLeft}
             >
               En nuestro consultorio dental, nos enorgullece ofrecer una amplia
@@ -156,7 +156,7 @@ export const Servicios = () => {
           <div className="line-animation"></div>
 
           <div
-            className="text-center mt-10 grid place-items-center w-[90%] mx-auto opacity-0 grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4"
+            className="text-center mt-10 grid place-items-center w-[90%] mx-auto opacity-0 grid-cols-1 gap-5 md:grid-cols-3"
             ref={useAnimateFadeUp}
           >
             {servicios.map((servicio) => (

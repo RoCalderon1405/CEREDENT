@@ -191,7 +191,7 @@ export const About = () => {
               {sections.map((section) => (
                 <div
                   key={section.id}
-                  className="p-4 bg-blue-200 rounded-lg mt-8 text-center ease-in duration-300 border-5 border-sky-400 shadow-[0_1px_35px_rgba(55,102,255,0.6)] md:ml-5 lg:hover:scale-105"
+                  className="p-4 bg-blue-200 rounded-lg mt-8 text-center ease-in duration-300 border-5 border-sky-400 shadow-[0_1px_4px_rgba(255,0,0,0.3)] md:ml-5 lg:hover:scale-105"
                 >
                   <FaTooth size={40} className="text-green-500 mb-2" />
                   <h3 className="text-xl font-semibold text-blue-600">{section.title}</h3>
