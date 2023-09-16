@@ -12,36 +12,43 @@ import { Testimonios } from "./Components/Testimonios/Testimonios";
 import { Tarjetas } from "./Components/Tarjetas/Tarjetas";
 import { Historia } from "./Components/Historia/Historia";
 import { OdontologiaEstetica } from "./Components/Servicios/TipoServicio/OdontoEstetica";
+import { NavbarServicio } from "./Components/Navbar/NavbarServicio";
 
 function App() {
   return (
     <>
       <Router>
-        <NavbarHome />
         <Routes>
           <Route
             path="/"
             element={
               <>
+              <NavbarHome />
                 <Header />
                 <About />
                 <Historia />
                 {/* <Doctores /> */}
                 <Servicios />
                 <Tarjetas />
-                <Trabajos />
+                {/* <Trabajos /> */}
                 <Testimonios />
+                <ContactUs />
+                <Footer />
               </>
             }
           />
           
           <Route
             path="/servicios/odontologia-estetica"
-            element={<OdontologiaEstetica />}
+            element={
+            <>
+            <NavbarServicio/>
+            <OdontologiaEstetica />
+            <ContactUs />
+            </>
+            }
           />
         </Routes>
-        <ContactUs />
-        <Footer />
       </Router>
     </>
   );

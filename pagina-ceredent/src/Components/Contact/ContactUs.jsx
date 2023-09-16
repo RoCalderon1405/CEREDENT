@@ -13,7 +13,7 @@ export const ContactUs = () => {
   const contactos = [
     {
       contactoId: 1,
-      cardColorAndHover: "bg-green-300 hover:bg-emerald-400 lg:hover:scale-110",
+      cardColorAndHover: "bg-[#2A2A2A] hover:bg-[#19645 lg:hover:scale-105",
       medio: "WhatsApp",
       contacto: "+52 55 3029 6592",
       linkContacto:
@@ -22,7 +22,7 @@ export const ContactUs = () => {
     },
     {
       contactoId: 2,
-      cardColorAndHover: "bg-blue-300 hover:bg-sky-400 lg:hover:scale-110",
+      cardColorAndHover: "bg-[#2A2A2A] hover:bg-[#19645 lg:hover:scale-105",
       medio: "Messenger",
       contacto: "Roberto Rojas",
       linkContacto: "http://m.me/tonatiuh.calderon.18",
@@ -30,7 +30,7 @@ export const ContactUs = () => {
     },
     {
       contactoId: 3,
-      cardColorAndHover: "bg-pink-300 hover:bg-rose-400 lg:hover:scale-110",
+      cardColorAndHover: "bg-[#2A2A2A] hover:bg-[#19645 lg:hover:scale-105",
       medio: "Instagram",
       contacto: "poncho@ceredent.com",
       linkContacto: "https://react-icons.github.io/react-icons/search?q=what",
@@ -38,11 +38,11 @@ export const ContactUs = () => {
     },
     {
       contactoId: 4,
-      cardColorAndHover: "bg-blue-300 hover:bg-indigo-400 lg:hover:scale-110",
+      cardColorAndHover: "bg-[#2A2A2A] hover:bg-[#19645 lg:hover:scale-105",
       medio: "Email",
       contacto: "poncho@ceredent.com",
       linkContacto: "mailto:rocalderon1405@hotmail.com",
-      icono: <AiOutlineMail className="text-black text-4xl" />,
+      icono: <AiOutlineMail className="text-white text-4xl" />,
     },
   ];
 
@@ -120,19 +120,19 @@ export const ContactUs = () => {
 
   return (
     <section
-      className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100"
+      className="bg-gradient-to-t from-[#2A2A2A] to-[#191645]"
       id="contacto"
     >
       <div className="container mx-auto py-[8rem] ">
         <div className="flex flex-col items-center lg:justify-center md:w-[80%] m-auto">
           <h2
-            className="flex gap-4 text-3xl md:text-4xl font-black mb-4 text-blue-800 opacity-0"
+            className="flex gap-4 text-3xl md:text-4xl font-black mb-4 text-white opacity-0"
             ref={useAnimateFadeUp}
           >
             Contáctanos <ImWhatsapp />
           </h2>
           <p
-            className="text-sm text-center md:text-xl mt-1 mb-1 text-black opacity-0"
+            className="text-sm text-center md:text-xl mt-1 mb-1 text-white/80 opacity-0"
             ref={useAnimateFadeLeft}
           >
             ¿Listo para sonreír con confianza? ¡Contáctanos y conoce cómo
@@ -140,8 +140,8 @@ export const ContactUs = () => {
           </p>
           <div className="line-animation"></div>
         </div>
-        <div className="flex flex-col my-10 lg:grid lg:grid-cols-2">
-          <div className="flex flex-col gap-10 items-center mx-auto w-full mt-10">
+        <div className="flex flex-col my-10 md:w-[80%] mx-auto lg:grid lg:grid-cols-2">
+          <div className="flex flex-col gap-[4rem] items-center mx-auto w-full mt-10">
             {contactos.map((item) => (
               <CartaContact
                 key={item.contactoId}
@@ -154,11 +154,11 @@ export const ContactUs = () => {
               />
             ))}
           </div>
-          <div className="w-full mx-auto">
+          <div className="min-w-[300px] mx-auto">
             <FormContactUs />
           </div>
         </div>
-        <div className="w-full min-w-[300px] m-auto ">
+        <div className=" min-w-[300px] mx-auto mt-[8rem]">
           <MapaContact />
         </div>
       </div>

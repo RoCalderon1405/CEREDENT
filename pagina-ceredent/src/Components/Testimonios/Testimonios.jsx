@@ -77,32 +77,31 @@ export const Testimonios = () => {
   });
 
   return (
-    <section className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100" id="testimonios">
+    <section className="bg-gradient-to-t from-[#191645] to-[#2A2A2A]" id="testimonios">
       <div className="container mx-auto py-[6rem]">
         <div className="flex flex-col items-center lg:justify-center md:w-[80%] m-auto">
           <h2
-            className="flex gap-4 text-3xl md:text-4xl font-black mb-10 text-blue-800 opacity-0"
+            className="flex gap-4 text-3xl md:text-4xl font-black mb-10 text-white opacity-0"
             ref={useAnimateFadeUp}
           >
             Testimonios <FaUsers />
           </h2>
           <p
-            className="text-sm text-center md:text-lg mt-1 mb-6 text-black opacity-0"
+            className="text-sm text-center md:text-lg mt-1 mb-6 text-white/80 opacity-0"
             ref={useAnimateFadeLeft}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
             nesciunt unde illum illo modi fugit nihil fuga id earum omnis. Eius
             quisquam laboriosam officiis numquam!
           </p>
-          <div className="line-animation"></div>
         </div>
         <div className="flex flex-col items-center w-full mx-auto">
           <Swiper
             spaceBetween={40}
             centeredSlides={true}
             autoplay={{
-              delay: 4000,
-              disableOnInteraction: true,
+              delay: 3000,
+              disableOnInteraction: false,
             }}
             pagination={{
               clickable: true,

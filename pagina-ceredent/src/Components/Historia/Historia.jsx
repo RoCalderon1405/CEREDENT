@@ -29,16 +29,14 @@ export const Historia = () => {
       if (entry.isIntersecting) {
         entry.target.classList.add(
           "animate-fade-up",
-          "animate-duration-1000",
-          "animate-delay-[800ms]",
+          "animate-duration-1200",
           "animate-ease-in-out",
           "opacity:1"
         );
       } else {
         entry.target.classList.remove(
           "animate-fade-up",
-          "animate-duration-1000",
-          "animate-delay-[800ms]",
+          "animate-duration-1200",
           "animate-ease-in-out",
           "opacity:1"
         );
@@ -50,14 +48,14 @@ export const Historia = () => {
       if (entry.isIntersecting) {
         entry.target.classList.add(
           "animate-fade",
-          "animate-duration-1000",
+          "animate-duration-1800",
           "animate-ease-in-out",
           "opacity:1"
         );
       } else {
         entry.target.classList.remove(
           "animate-fade",
-          "animate-duration-1000",
+          "animate-duration-1800",
           "animate-ease-in-out",
           "opacity:1"
         );
@@ -67,21 +65,18 @@ export const Historia = () => {
 
   // Crear instancias del hook de Intersection Observer
   const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, {
-    threshold: 0.2,
+    threshold: 0.1,
   });
   const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, {
-    threshold: 0.2,
-  });
-  const useAnimateButtonFadeUp = useIntersectionObserver(animateFadeUp, {
-    threshold: 0.2,
+    threshold: 0.1,
   });
   const useAnimateFade = useIntersectionObserver(animateFade, {
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   return (
     <section id="historia" className="bg-gradient-to-t from-[#191645] to-[#2A2A2A] py-8">
-      <div className="mx-auto py-[2rem] md:py-[5rem] lg:gap-10">
+      <div className="w-[95%] md:w-[80%] mx-auto py-[2rem] md:py-[5rem] lg:gap-10">
         <div className="flex flex-col items-center w-[80%] md:w-[70%] lg:w-[55%] mx-auto lg:justify-center">
           <h2
             className="text-3xl md:text-5xl font-black mb-5 text-white opacity-0 mx-auto"
@@ -101,9 +96,9 @@ export const Historia = () => {
         </div>
 
         <div className="mt-[3rem] md:mt-[5rem]">
-          <div className="grid w-[80%] mx-auto gap-3 md:grid-cols-2 md:w-[80%]">
+          <div className="grid mx-auto gap-3 md:grid-cols-2 md:w-[80%]">
             <div
-              className="p-4 rounded-lg border-2 border-white/20 shadow-[0_1px_35px_rgba(47,178,152,0.35)] opacity-0"
+              className="p-4 rounded-lg border-2 border-white/20 opacity-0"
               ref={useAnimateFade}
             >
               <img
@@ -113,7 +108,7 @@ export const Historia = () => {
               />
             </div>
             <div className="p-4 text-center">
-              <FaTooth size={40} className="text-[#43C6AC] mb-2" />
+              <FaTooth size={40} className="text-white mb-2" />
               <h3 className="text-xl font-semibold text-white mb-5">
                 Nuestra Trayectoria
               </h3>

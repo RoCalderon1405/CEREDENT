@@ -59,9 +59,9 @@ export const FormContactUs = () => {
     e.target.reset();
   };
   return (
-    <div className="mt-8 mx-auto bg-slate-300 p-3 rounded-lg border-2 border-black/70 min-w-[200px] shadow-[0_1px_35px_rgba(55,102,255,0.6)]  lg:h-fit z-[10]">
+    <div className="mt-[8rem] lg:mt-8 w-full mx-auto bg-[#2A2A2A] p-3 rounded-lg border-2 border-[#43C6AC] min-w-[200px] shadow-[0_1px_35px_rgba(55,102,255,0.6)]  lg:h-fit">
       <div className="flex flex-col items-center">
-        <h2 className="font-bold text-lg text-blue-800">
+        <h2 className="font-bold text-lg text-white text-center">
           Ponte en contácto con nuestros expertos.
         </h2>
       </div>
@@ -71,7 +71,7 @@ export const FormContactUs = () => {
           name="name"
           variant="underlined"
           label="Nombre"
-          color="secondary"
+          color="primary"
           // isClearable
           size="lg"
           value={name}
@@ -80,13 +80,14 @@ export const FormContactUs = () => {
             <AiOutlineUser className="text-2xl text-blue-400 pointer-events-none flex-shrink-0" />
           }
           required
+          className="text-md text-white"
         />
         <Input
           type="phone"
           name="phone"
           variant="underlined"
           label="Teléfono"
-          color="secondary"
+          color="primary"
           // isClearable
           size="lg"
           value={phone}
@@ -95,13 +96,14 @@ export const FormContactUs = () => {
             <MdPhoneIphone className="text-2xl text-blue-400 pointer-events-none flex-shrink-0" />
           }
           required
+          className="text-md text-white"
         />
         <Input
           type="email"
           name="email"
           variant="underlined"
           label="Email"
-          color="secondary"
+          color="primary"
           // isClearable
           size="lg"
           value={email}
@@ -110,7 +112,7 @@ export const FormContactUs = () => {
             <FiAtSign className="text-2xl text-blue-400 pointer-events-none flex-shrink-0" />
           }
           required
-          className="text-md"
+          className="text-md text-white"
         />
         <Textarea
           name="message"
@@ -118,12 +120,12 @@ export const FormContactUs = () => {
           radius="lg"
           // label="Description"
           labelPlacement="outside"
-          color="secondary"
+          color="primary"
           placeholder="Ingrese su mensaje"
           description="Atenderemos su mensaje lo más pronto posible."
           size="lg"
           required
-          className="max-w-xs mt-5"
+          className="max-w-xs mt-5 text-white"
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
@@ -133,7 +135,7 @@ export const FormContactUs = () => {
             variant="bordered"
             type="submit"
             isLoading={isValid}
-            className="font-bold hover:bg-blue-600 hover:text-white"
+            className="font-bold text-white hover:bg-blue-600"
           >
             Enviar
           </Button>
