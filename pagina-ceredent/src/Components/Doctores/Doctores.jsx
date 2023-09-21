@@ -86,12 +86,12 @@ export const Doctores = () => {
     >
       <div className="container m-auto py-[5rem]">
         <div className="flex flex-col items-center w-full mx-auto md:w-[60%] lg:justify-center">
-          <h2
+          <h1
             className="flex justify-center text-3xl md:text-4xl font-black mb-10 text-sky-400 opacity-0 mx-auto"
             ref={useAnimateFadeUp}
           >
             Nuestro Equipo <FaUserMd className="text-sky-600 ml-2" />
-          </h2>
+          </h1>
 
           <p
             className="text-md text-center mt-1 mb-6 text-black opacity-0 mx-0 md:text-lg"

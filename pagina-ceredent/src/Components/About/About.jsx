@@ -166,12 +166,12 @@ export const About = () => {
     >
       <div className=" mx-auto py-[5rem] lg:gap-10">
         <div className="flex flex-col items-center w-[80%] md:w-[55%] mx-auto lg:justify-center">
-          <h2
+          <h1
             className="text-4xl md:text-5xl font-black mb-5 text-white opacity-0 mx-auto"
             ref={useAnimateFadeUp}
           >
             Conócenos
-          </h2>
+          </h1>
           <p
             className="text-md text-center mt-1 mb-4 text-white/80 opacity-0 mx-0 md:text-md "
             ref={useAnimateFadeLeft}

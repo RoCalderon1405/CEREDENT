@@ -53,9 +53,12 @@ export const MapaContact = () => {
   });
 
   return (
-    <div className="my-5 text-center min-w-[300px] w-[95%] md:w-[80%] mx-auto">
+    <section
+      className="text-center min-w-[300px] w-[95%] md:w-[80%] mx-auto"
+      id="ubicacion"
+    >
       <div
-        className="flex justify-center mb-5 opacity-0"
+        className="flex justify-center mb-5 pt-[8rem] opacity-0"
         ref={useAnimateFadeUp}
       >
         <h2 className="text-3xl text-white font-black flex items-center">
@@ -65,7 +68,9 @@ export const MapaContact = () => {
       <div className="opacity-0" ref={useAnimateFade}>
         <div className="grid grid-cols-1 my-[5rem] md:grid-cols-2 gap-5">
           <div className="">
-            <h3 className="text-xl font-semibold text-white/80 mb-5">Dirección</h3>
+            <h3 className="text-xl font-semibold text-white/80 mb-5">
+              Dirección
+            </h3>
             <p className="text-white/60">
               {" "}
               Av. 613 no. 33-4ta, sección de Aragón, Gustavo A. Madero, 07979
@@ -73,14 +78,16 @@ export const MapaContact = () => {
             </p>
           </div>
           <div className="mb-5">
-            <h3 className="text-xl font-semibold text-white/80 mb-5">Horario</h3>
+            <h3 className="text-xl font-semibold text-white/80 mb-5">
+              Horario
+            </h3>
             <p className="text-white/60">Lunes a Sábado: 9 AM - 5 PM</p>
           </div>
         </div>
 
         <div className="rounded-full">
           <iframe
-          className="rounded-lg"
+            className="rounded-lg"
             width="100%"
             height="600"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Av%20613%20no.%2033-4ta,%20secci%C3%B3n%20de%20Arag%C3%B3n,%20Gustavo%20A.%20Madero,%2007979%20Ciudad%20de%20M%C3%A9xico,%20CDMX+(CERE%20DENT)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
@@ -89,6 +96,6 @@ export const MapaContact = () => {
           </iframe>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

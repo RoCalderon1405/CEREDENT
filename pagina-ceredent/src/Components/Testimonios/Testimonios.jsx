@@ -80,12 +80,12 @@ export const Testimonios = () => {
     <section className="bg-gradient-to-t from-[#191645] to-[#2A2A2A]" id="testimonios">
       <div className="container mx-auto py-[6rem]">
         <div className="flex flex-col items-center lg:justify-center md:w-[80%] m-auto">
-          <h2
+          <h1
             className="flex gap-4 text-3xl md:text-4xl font-black mb-10 text-white opacity-0"
             ref={useAnimateFadeUp}
           >
-            Testimonios <FaUsers />
-          </h2>
+            Testimonios
+          </h1>
           <p
             className="text-sm text-center md:text-lg mt-1 mb-6 text-white/80 opacity-0"
             ref={useAnimateFadeLeft}

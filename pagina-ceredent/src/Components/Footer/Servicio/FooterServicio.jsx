@@ -1,10 +1,10 @@
 import React from "react";
-import Ceredent from "../../assets/Logo/CEREDENTcorteSinText.png";
-import { Link } from "@nextui-org/react";
+import Ceredent from "../../../assets/Logo/CEREDENTcorteSinText.png";
+import { Link } from "react-router-dom";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 
-export const Footer = () => {
+export const FooterServicio = () => {
   return (
     <section className="bg-gray-900 mb-0 pb-12" id="footer">
       <div className="w-[80%] mx-auto py-8 text-white md:gap-10 md:grid md:grid-cols-4">
@@ -15,47 +15,18 @@ export const Footer = () => {
           <h2 className="text-xl">CEREDENT</h2>
           <Link
             className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
-            href="#"
+            to="/#"
           >
             Inicio
           </Link>
-          <Link
-            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
-            href="#aboutUs"
-          >
-            ¿Quiénes Somos?
-          </Link>
-          <Link
-            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
-            href="#historia"
-          >
-            Historia
-          </Link>
-          <Link
-            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
-            href="#servicios"
-          >
-            Servicios
-          </Link>
-          <Link
-            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
-            href="#trabajos"
-          >
-            Trabajos
-          </Link>
-          <Link
-            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
-            href="#contacto"
-          >
-            Contacto
-          </Link>
+          
         </div>
 
         <div className="mt-8">
           <h2 className="flex justify-center text-xl ">Redes Sociales</h2>
           <div className="flex justify-center mt-4 mx-auto gap-8 items-center">
-            <AiOutlineFacebook className="text-5xl text-[#4273f8] " />
-            <BsInstagram className="text-4xl text-[#E4405F]" />
+            <AiOutlineFacebook className="text-5xl text-[#4273f8] lg:hover:scale-110 transition-all duration-300 ease-in-out" />
+            <BsInstagram className="text-4xl text-[#E4405F] lg:hover:scale-110 transition-all duration-300 ease-in-out" />
           </div>
         </div>
         <div className="mt-8 flex flex-col items-center">

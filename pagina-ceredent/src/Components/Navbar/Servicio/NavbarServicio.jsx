@@ -14,8 +14,8 @@ import {
   Button,
 } from "@nextui-org/react";
 import { Link } from "react-router-dom";
-import LogoCeredentNav from "../../assets/Logo/CEREDENTcorteSinText.png";
-import { MyButton } from "../../Hooks/MyButton";
+import LogoCeredentNav from "../../../assets/Logo/CEREDENTcorteSinText.png";
+import { MyButton } from "../../../Hooks/MyButton";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { AiFillHome } from "react-icons/ai";
 import {
@@ -25,7 +25,7 @@ import {
   FaBriefcase,
   FaComments,
 } from "react-icons/fa";
-import "./navbar.css";
+import "../navbar.css";
 
 export const NavbarServicio = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -39,7 +39,7 @@ export const NavbarServicio = () => {
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Odontopediatría",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/odontopediatria",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
@@ -86,12 +86,14 @@ export const NavbarServicio = () => {
 
         <NavbarContent className="lg:hidden" justify="center">
           <NavbarBrand>
-            <img
-              src={LogoCeredentNav}
-              alt="CEREDENT"
-              id="logoCere"
-              className=""
-            />
+            <a href="#">
+              <img
+                src={LogoCeredentNav}
+                alt="CEREDENT"
+                id="logoCere"
+                className=""
+              />
+            </a>
           </NavbarBrand>
         </NavbarContent>
 
@@ -99,13 +101,15 @@ export const NavbarServicio = () => {
 
         <NavbarContent className="hidden lg:flex p-0" justify="center">
           <NavbarBrand className="p-0">
-            <img src={LogoCeredentNav} alt="CEREDENT" id="logoCere" />
+            <a href="#">
+              <img src={LogoCeredentNav} alt="CEREDENT" id="logoCere" />
+            </a>
           </NavbarBrand>
         </NavbarContent>
 
         <NavbarContent
           className="hidden lg:flex justify-center gap-4 "
-          justify="center"
+          justify="end"
         >
           <NavbarItem>
             <div className="flex items-center">
@@ -119,49 +123,16 @@ export const NavbarServicio = () => {
               </Link>
             </div>
           </NavbarItem>
-          <NavbarItem>
-            <div className="flex items-center">
-              <a
-                color="foreground"
-                href="/#aboutUs"
-                
-                fontSize="large"
-                className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
-              >
-                ¿Quiénes Somos?
-              </a>
-            </div>
-          </NavbarItem>
-          <NavbarItem>
-            <div className="flex items-center">
-              <Link
-                to="/#doctores"
-                aria-current="page"
-                className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
-              >
-                Nuestros Doctores
-              </Link>
-            </div>
-          </NavbarItem>
           <Dropdown backdrop="blur" size="sm">
             <NavbarItem>
               <div className="flex items-center">
-                <Link
-                  color="foreground"
-                  to="/#servicios"
-                  // href="#servicios"
-                  className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
-                >
-                  Servicios
-                </Link>
                 <DropdownTrigger>
-                  <Button
-                    size="sm"
-                    className="p-0 gap-0 bg-transparent min-w-[1px] h-[18px] data-[hover=true]:bg-transparent overflow-visible justify-start "
-                    endContent={
-                      <MdOutlineKeyboardArrowDown className="hover:text-blue-600 text-5xl" />
-                    }
-                  ></Button>
+                  <Link
+                    color="foreground"
+                    className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
+                  >
+                    Servicios
+                  </Link>
                 </DropdownTrigger>
               </div>
             </NavbarItem>
@@ -185,41 +156,30 @@ export const NavbarServicio = () => {
           </Dropdown>
           <NavbarItem>
             <div className="flex items-center">
-              <Link
+              <a
                 color="foreground"
-                // to="/#trabajos"
-                href="/#trabajos"
+                href="#ubicacion"
+                fontSize="large"
                 className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
               >
-                Laboratorio Dental
-              </Link>
-            </div>
-          </NavbarItem>
-          <NavbarItem>
-            <div className="flex items-center">
-              <Link
-                color="foreground"
-                to="/#testimonios"
-                className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
-              >
-                Testimonios
-              </Link>
+                Ubicación
+              </a>
             </div>
           </NavbarItem>
         </NavbarContent>
 
         <NavbarContent className="flex-grow-lg" justify="end">
           <NavbarItem className="p-2">
-            <MyButton
-              as={Link}
-              size="md"
-              color="blue"
-              to="/#contacto"
-              variant="shadow"
-              className="w-auto text-xs transition duration-300 ease-out lg:hover:bg-sky-500 lg:hover:scale-110 lg:hover:text-black lg:hover:font-extrabold	"
-            >
-              Contáctanos
-            </MyButton>
+            <a href="#contacto">
+              <Button
+                size="md"
+                color="blue"
+                variant="shadow"
+                className="w-auto text-[.85rem] bg-blue-900 text-white font-extrabold transition duration-300 ease-out lg:hover:scale-105"
+              >
+                Contáctanos
+              </Button>
+            </a>
           </NavbarItem>
         </NavbarContent>
 
@@ -237,32 +197,7 @@ export const NavbarServicio = () => {
               </Link>
             </Button>
           </NavbarMenuItem>
-          <NavbarMenuItem>
-            <Button
-              className="bg-transparent my-5 p-1"
-              startContent={<FaUser className="text-3xl text-sky-500" />}
-            >
-              <Link
-                className="w-full font-medium text-xl text-black/80"
-                to="/#aboutUs"
-              >
-                ¿Quiénes Somos?
-              </Link>
-            </Button>
-          </NavbarMenuItem>
-          <NavbarMenuItem>
-            <Button
-              className="bg- my-5 p-1"
-              startContent={<FaUserMd className="text-3xl text-sky-500" />}
-            >
-              <Link
-                className="w-full font-medium text-xl text-black/80"
-                to="/#doctores"
-              >
-                Nuestros Doctores
-              </Link>
-            </Button>
-          </NavbarMenuItem>
+
           {/* Menú desplegable servicios */}
           <NavbarMenuItem>
             <Button
@@ -272,10 +207,7 @@ export const NavbarServicio = () => {
               variant="light"
               startContent={<FaTooth className="text-3xl text-sky-500" />}
             >
-              <Link
-                className="w-full font-medium text-xl text-black/80"
-                to="/#servicios"
-              >
+              <Link className="w-full font-medium text-xl text-black/80">
                 Servicios
               </Link>
             </Button>
@@ -291,30 +223,15 @@ export const NavbarServicio = () => {
               </div>
             ))}
           </div>
-
           <NavbarMenuItem>
             <Button
               className="bg-transparent my-5 p-1"
-              startContent={<FaBriefcase className="text-3xl text-sky-500" />}
+              startContent={
+                <AiFillHome className="text-5xl text-sky-500 items-bottom" />
+              }
             >
-              <Link
-                className="w-full font-medium text-xl text-black/80"
-                to="/#trabajos"
-              >
-                Laboratorio Dental
-              </Link>
-            </Button>
-          </NavbarMenuItem>
-          <NavbarMenuItem>
-            <Button
-              className="bg-transparent my-5  p-1 "
-              startContent={<FaComments className="text-5xl text-sky-500" />}
-            >
-              <Link
-                className="w-full font-medium text-xl text-black/80"
-                to="/#testimonios"
-              >
-                Testimonios
+              <Link className="w-full font-bold text-xl text-blue-600" to="/#">
+                Inicio
               </Link>
             </Button>
           </NavbarMenuItem>

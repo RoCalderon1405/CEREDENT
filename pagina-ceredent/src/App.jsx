@@ -12,9 +12,23 @@ import { Testimonios } from "./Components/Testimonios/Testimonios";
 import { Tarjetas } from "./Components/Tarjetas/Tarjetas";
 import { Historia } from "./Components/Historia/Historia";
 import { OdontologiaEstetica } from "./Components/Servicios/TipoServicio/OdontoEstetica";
-import { NavbarServicio } from "./Components/Navbar/NavbarServicio";
+import { NavbarServicio } from "./Components/Navbar/Servicio/NavbarServicio";
+import { FooterServicio } from "./Components/Footer/Servicio/FooterServicio";
+import { OdontoPediatria } from "./Components/Servicios/TipoServicio/OdontoPediatria";
 
 function App() {
+  // Componente de contenedor para los servicios
+  const ServicioContainer = ({ children }) => {
+    return (
+      <>
+        <NavbarServicio />
+        {children}
+        <ContactUs />
+        <FooterServicio />
+      </>
+    );
+  };
+
   return (
     <>
       <Router>
@@ -23,7 +37,7 @@ function App() {
             path="/"
             element={
               <>
-              <NavbarHome />
+                <NavbarHome />
                 <Header />
                 <About />
                 <Historia />
@@ -37,15 +51,21 @@ function App() {
               </>
             }
           />
-          
+        {/* Uso del componente de contenedor en las rutas */}
           <Route
             path="/servicios/odontologia-estetica"
             element={
-            <>
-            <NavbarServicio/>
-            <OdontologiaEstetica />
-            <ContactUs />
-            </>
+              <ServicioContainer>
+                <OdontologiaEstetica />
+              </ServicioContainer>
+            }
+          />
+          <Route
+            path="/servicios/odontopediatria"
+            element={
+              <ServicioContainer>
+                <OdontoPediatria />
+              </ServicioContainer>
             }
           />
         </Routes>

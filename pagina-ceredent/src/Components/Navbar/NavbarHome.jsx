@@ -39,7 +39,7 @@ export const NavbarHome = () => {
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Odontopediatría",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/odontopediatria",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
@@ -86,12 +86,14 @@ export const NavbarHome = () => {
 
         <NavbarContent className="lg:hidden" justify="center">
           <NavbarBrand>
-            <img
-              src={LogoCeredentNav}
-              alt="CEREDENT"
-              id="logoCere"
-              className=""
-            />
+            <a href="#">
+              <img
+                src={LogoCeredentNav}
+                alt="CEREDENT"
+                id="logoCere"
+                className=""
+              />
+            </a>
           </NavbarBrand>
         </NavbarContent>
 
@@ -99,7 +101,9 @@ export const NavbarHome = () => {
 
         <NavbarContent className="hidden lg:flex p-0" justify="center">
           <NavbarBrand className="p-0">
-            <img src={LogoCeredentNav} alt="CEREDENT" id="logoCere" />
+            <a href="#">
+              <img src={LogoCeredentNav} alt="CEREDENT" id="logoCere" />
+            </a>
           </NavbarBrand>
         </NavbarContent>
 
@@ -131,17 +135,17 @@ export const NavbarHome = () => {
               </a>
             </div>
           </NavbarItem>
-          {/* <NavbarItem>
+          <NavbarItem>
             <div className="flex items-center">
               <a
-                to="#doctores"
+                href="#historia"
                 aria-current="page"
                 className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
               >
-                Nuestros Doctores
+                Nuestra Historia
               </a>
             </div>
-          </NavbarItem> */}
+          </NavbarItem>
           <Dropdown backdrop="blur" size="sm">
             <NavbarItem>
               <div className="flex items-center">
@@ -254,9 +258,9 @@ export const NavbarHome = () => {
             >
               <a
                 className="w-full font-medium text-xl text-black/80"
-                href="/#doctores"
+                href="/#historia"
               >
-                Nuestros Doctores
+                Historia
               </a>
             </Button>
           </NavbarMenuItem>
@@ -271,7 +275,7 @@ export const NavbarHome = () => {
             >
               <a
                 className="w-full font-medium text-xl text-black/80"
-                to="/#servicios"
+                href="/#servicios"
               >
                 Servicios
               </a>
@@ -309,7 +313,7 @@ export const NavbarHome = () => {
             >
               <a
                 className="w-full font-medium text-xl text-black/80"
-                to="#testimonios"
+                href="#testimonios"
               >
                 Testimonios
               </a>

@@ -23,7 +23,7 @@ export const Tarjetas = () => {
         style={{ backgroundImage: `url(${TarjetasImg})` }}
       >
         <div className="tarjetas-content font-bold">
-          <h2 className="text-3xl md:text-5xl">ACEPTAMOS PAGOS</h2>
+          <h1 className="text-3xl md:text-5xl">ACEPTAMOS PAGOS</h1>
           <p className="text-xl mt-5 md:text-2xl">con tarjetas de crédito y débito</p>
           <div className="flex max-w-[80%] mx-auto justify-center gap-6 mt-6 md:mt-[8rem] md:justify-evenly">
             <img src={Visa} alt="" className="w-[90px] md:w-[230px]" />

@@ -3,7 +3,7 @@ import { FaTooth } from "react-icons/fa";
 import EsteticaDentalImg from "../../../assets/Servicios/Odontologia/odontoEstetica.jpg";
 import useIntersectionObserver from "../../../Hooks/InterseccitonObserver";
 
-export const OdontologiaEstetica = () => {
+export const OdontoPediatria = () => {
   // Definir las funciones de callback para los efectos de animación
   const animateFadeLeft = (entries) => {
     entries.forEach((entry) => {
@@ -21,7 +21,7 @@ export const OdontologiaEstetica = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add(
-          "animate-fade-up",
+          "animate-fade",
           "animate-duration-[1300ms]",
           "animate-ease-in-out",
           "opacity:100"
@@ -54,7 +54,7 @@ export const OdontologiaEstetica = () => {
 
   return (
     <section
-      id="odontologiaEstetica"
+      id="odontoPedriatria"
       className="bg-gradient-to-t from-[#191645] to-[#2A2A2A] py-8"
     >
       <div className="w-[95%] md:w-[80%] mx-auto py-[2rem] md:py-[2rem] lg:gap-10">
@@ -63,15 +63,13 @@ export const OdontologiaEstetica = () => {
             className="text-3xl text-center md:text-4xl font-black mb-5 text-white opacity-0 mx-auto"
             ref={useAnimateFadeUp}
           >
-            Transforma tu Sonrisa con <br /> Odontología Estética
+            Cuida las Sonrisas de los <br /> Más Pequeños con Odontopediatría
           </h1>
           <p
             className="text-xl text-center my-[4rem] text-white/80 mx-0 md:text-md op"
             ref={useAnimateFadeLeft}
           >
-            Mejoramos la apariencia de tu sonrisa con procedimientos como
-            blanqueamiento dental, carillas y restauraciones estéticas. Nuestro
-            objetivo es brindarte una sonrisa radiante y confianza en ti mismo.
+           En nuestra clínica, sabemos lo importante que es brindar un cuidado dental especializado a los niños. Nuestros expertos en odontopediatría están dedicados a proporcionar tratamientos dentales seguros y efectivos, adaptados a las necesidades de los más pequeños. Desde limpiezas regulares hasta tratamientos preventivos y educación sobre la higiene oral, estamos aquí para asegurarnos de que cada niño tenga una sonrisa saludable y radiante.
           </p>
         </div>
 
@@ -89,12 +87,12 @@ export const OdontologiaEstetica = () => {
             </div>
             <div className="p-4 text-center">
               <FaTooth size={40} className="text-[#43C6AC] mb-8" />
-              <h3 className="text-xl text-white text-left font-semibold mb-8">Nuestros Servicios</h3>
+              <h3 className="text-xl text-white text-left font-semibold mb-5">
+                Nuestros Servicios
+              </h3>
               <p className="text-white/80 text-left">
-                Ofrecemos una variedad de tratamientos estéticos para mejorar la
-                apariencia de tus dientes y sonrisa. Desde blanqueamiento dental
-                hasta carillas y restauraciones personalizadas, estamos aquí
-                para ayudarte a lograr la sonrisa que siempre has deseado.
+              Nuestra clínica ofrece una gama completa de servicios de odontopediatría para niños de todas las edades. Desde revisiones dentales regulares y selladores hasta tratamientos de ortodoncia temprana, estamos comprometidos a proporcionar el mejor cuidado dental para tus hijos. Nuestro equipo está entrenado para crear un ambiente cómodo y acogedor para que los niños se sientan seguros durante cada visita.
+
               </p>
             </div>
           </div>

@@ -125,12 +125,12 @@ export const ContactUs = () => {
     >
       <div className="container mx-auto py-[8rem] ">
         <div className="flex flex-col items-center lg:justify-center md:w-[80%] m-auto">
-          <h2
+          <h1
             className="flex gap-4 text-3xl md:text-4xl font-black mb-4 text-white opacity-0"
             ref={useAnimateFadeUp}
           >
-            Contáctanos <ImWhatsapp />
-          </h2>
+            Contáctanos 
+          </h1>
           <p
             className="text-sm text-center md:text-xl mt-1 mb-1 text-white/80 opacity-0"
             ref={useAnimateFadeLeft}
@@ -138,7 +138,6 @@ export const ContactUs = () => {
             ¿Listo para sonreír con confianza? ¡Contáctanos y conoce cómo
             podemos ayudarte!
           </p>
-          <div className="line-animation"></div>
         </div>
         <div className="flex flex-col my-10 md:w-[80%] mx-auto lg:grid lg:grid-cols-2">
           <div className="flex flex-col gap-[4rem] items-center mx-auto w-full mt-10">
@@ -158,7 +157,7 @@ export const ContactUs = () => {
             <FormContactUs />
           </div>
         </div>
-        <div className=" min-w-[300px] mx-auto mt-[8rem]">
+        <div className=" min-w-[300px] mx-auto ">
           <MapaContact />
         </div>
       </div>

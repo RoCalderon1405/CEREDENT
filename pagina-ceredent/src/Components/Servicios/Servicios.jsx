@@ -133,12 +133,12 @@ export const Servicios = () => {
       <div className="container m-auto py-[6rem]">
         <div>
           <div className="flex flex-col items-center w-full md:w-[60%] mx-auto lg:justify-center">
-            <h2
+            <h1
               className="text-3xl text-white md:text-4xl font-black mb-5 opacity-0 mx-auto"
               ref={useAnimateFadeRight}
             >
               Nuestros Servicios
-            </h2>
+            </h1>
             <p
               className="text-md text-center mt-1 mb-4 text-white/80 opacity-0 mx-0 md:text-lg"
               ref={useAnimateFadeLeft}
@@ -153,7 +153,6 @@ export const Servicios = () => {
               personalizadas.
             </p>
           </div>
-          <div className="line-animation"></div>
 
           <div
             className="text-center mt-10 grid place-items-center w-[90%] mx-auto opacity-0 grid-cols-1 gap-5 md:grid-cols-3"
