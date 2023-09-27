@@ -41,32 +41,32 @@ export const NavbarServicio = () => {
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Cirugía bucal",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/cirugia-bucal",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Prótesis dentales",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/protesis-dentales",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Periodoncias",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/periodoncias",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Ortodoncias",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/ortodoncias",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Endodoncias",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/endodoncias",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Bichectomia",
-      ruta: "/servicios/endodoncias",
+      ruta: "/servicios/bichectomia",
     },
   ];
 
