@@ -4,7 +4,7 @@ import testimonio1 from "../../assets/Testimonios/testimonio1.jpg"
 
 export const CartaTestimonios = () => {
   return (
-    <div className="block p-5">
+    <div className="swiper-wrapper">
       <Card className="bg-[#2A2A2A] border-2 border-[#43C6AC] shadow-[0px_10px_30px_rgba(55,102,255,0.4)] md:max-w-[400px] h-full m-auto overflow-hidden">
         <CardHeader className="justify-between">
           <div className="flex gap-5">

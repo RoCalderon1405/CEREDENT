@@ -27,7 +27,7 @@ export const CartaServicios = ({ id, title, img, descripcion, ruta }) => {
         <CardFooter className="text-small flex flex-col">
           <h5 className="text-lg text-white font-semibold">{title}</h5>
           <p className="text-white/80">{descripcion}</p>
-          <Link href={ruta} className="lg:hover:opacity-100">
+          <Link href={ruta} className="lg:hover:opacity-100 my-1">
             <Button className="mt-3 font-semibold text-md bg-[#44b8a0] text-white rounded-full lg:hover:bg-blue-700 lg:hover:scale-105 transition-all ease-in-out">
               Saber más
             </Button>

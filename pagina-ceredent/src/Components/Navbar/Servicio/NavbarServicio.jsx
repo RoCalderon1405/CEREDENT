@@ -149,9 +149,14 @@ export const NavbarServicio = () => {
                 <DropdownItem
                   key={service.title}
                   description={service.description}
-                  startContent={service.icon}
                 >
-                  <Link to={service.ruta}>{service.title}</Link>
+                  <Link
+                    to={service.ruta}
+                    className="flex items-center gap-2 h-full w-full"
+                  >
+                    {service.icon}
+                    <span>{service.title}</span>
+                  </Link>
                 </DropdownItem>
               ))}
             </DropdownMenu>
@@ -221,8 +226,13 @@ export const NavbarServicio = () => {
                 key={service.title}
                 className="flex items-center space-x-2 mb-3 p-1"
               >
-                <span className="">{service.icon}</span>
-                <Link to={service.ruta}>{service.title}</Link>
+                <Link
+                  to={service.ruta}
+                  className="flex items-center gap-2 h-full w-full"
+                >
+                  {service.icon}
+                  <span className="">{service.title}</span>
+                </Link>
               </div>
             ))}
           </div>

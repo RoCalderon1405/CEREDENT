@@ -7,7 +7,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 import { CartaTestimonios } from "./CartaTestimonios";
@@ -76,7 +76,10 @@ export const Testimonios = () => {
   });
 
   return (
-    <section className="bg-gradient-to-t from-[#191645] to-[#2A2A2A]" id="testimonios">
+    <section
+      className="bg-gradient-to-t from-[#191645] to-[#2A2A2A]"
+      id="testimonios"
+    >
       <div className="container mx-auto py-[6rem]">
         <div className="flex flex-col items-center lg:justify-center md:w-[80%] m-auto">
           <h1
@@ -94,10 +97,19 @@ export const Testimonios = () => {
             quisquam laboriosam officiis numquam!
           </p>
         </div>
-        <div className="flex flex-col items-center w-full mx-auto">
+        <div className="">
           <Swiper
-            spaceBetween={40}
             centeredSlides={true}
+            slidesPerView={'3'}
+            effect={'coverflow'}
+            grabCursor={true}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: false,
+            }}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -106,8 +118,7 @@ export const Testimonios = () => {
               clickable: true,
             }}
             navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
+            modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
           >
             <SwiperSlide>
               <CartaTestimonios />
