@@ -7,7 +7,12 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper/modules";
+import {
+  Autoplay,
+  Navigation,
+  Pagination,
+  EffectCoverflow,
+} from "swiper/modules";
 
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 import { CartaTestimonios } from "./CartaTestimonios";
@@ -99,16 +104,15 @@ export const Testimonios = () => {
         </div>
         <div className="">
           <Swiper
-            centeredSlides={true}
-            slidesPerView={'1'}
-            effect={'coverflow'}
             grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"1"}
             coverflowEffect={{
               rotate: 50,
               stretch: 0,
               depth: 100,
               modifier: 1,
-              slideShadows: false,
+              slideShadows: false
             }}
             autoplay={{
               delay: 3000,
