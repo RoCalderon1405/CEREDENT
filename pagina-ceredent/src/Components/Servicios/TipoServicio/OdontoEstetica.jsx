@@ -14,6 +14,13 @@ export const OdontologiaEstetica = () => {
           "animate-ease-in-out",
           "opacity:100"
         );
+      } else {
+        entry.target.classList.remove(
+          "animate-fade-left",
+          "animate-duration-[1300ms]",
+          "animate-ease-in-out",
+          "opacity:100"
+        );
       }
     });
   };
@@ -26,6 +33,13 @@ export const OdontologiaEstetica = () => {
           "animate-ease-in-out",
           "opacity:100"
         );
+      } else {
+        entry.target.classList.remove(
+          "animate-fade-up",
+          "animate-duration-[1300ms]",
+          "animate-ease-in-out",
+          "opacity:100"
+        );
       }
     });
   };
@@ -33,6 +47,13 @@ export const OdontologiaEstetica = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add(
+          "animate-fade",
+          "animate-duration-[1300ms]",
+          "animate-ease-in-out",
+          "opacity:100"
+        );
+      } else {
+        entry.target.classList.remove(
           "animate-fade",
           "animate-duration-[1300ms]",
           "animate-ease-in-out",
@@ -57,28 +78,27 @@ export const OdontologiaEstetica = () => {
       id="odontologiaEstetica"
       className="bg-gradient-to-t from-[#191645] to-[#2A2A2A] py-8"
     >
-      <div className="w-[95%] md:w-[80%] mx-auto py-[2rem] md:py-[2rem] lg:gap-10">
-        <div className="flex flex-col items-center w-[80%] md:w-[70%] lg:w-[55%] mx-auto lg:justify-center">
-          <h1
-            className="text-3xl text-center md:text-4xl font-black mb-5 text-white opacity-0 mx-auto"
-            ref={useAnimateFadeUp}
-          >
-            Transforma tu Sonrisa con <br /> Odontología Estética
-          </h1>
-          <p
-            className="text-xl text-center my-[4rem] text-white/80 mx-0 md:text-md op"
-            ref={useAnimateFadeLeft}
-          >
-            Mejoramos la apariencia de tu sonrisa con procedimientos como
-            blanqueamiento dental, carillas y restauraciones estéticas. Nuestro
-            objetivo es brindarte una sonrisa radiante y confianza en ti mismo.
-          </p>
+      <div className=" mx-auto py-[2rem] md:py-[2rem] lg:gap-10">
+        <div className="flex flex-col items-center w-[90%] md:w-[90%] lg:w-[55%] mx-auto lg:justify-center">
+          <div className="opacity-0" ref={useAnimateFadeUp}>
+            <h1 className="text-3xl text-left md:text-4xl font-black mb-5 text-white mx-auto">
+              Transforma tu Sonrisa <br /> Odontología Estética
+            </h1>
+          </div>
+          <div className="opacity-0" ref={useAnimateFadeLeft}>
+            <p className="text-xl text-left my-[4rem] text-white/80 mx-0 md:text-md">
+              Mejoramos la apariencia de tu sonrisa con procedimientos como
+              blanqueamiento dental, carillas y restauraciones estéticas.
+              Nuestro objetivo es brindarte una sonrisa radiante y confianza en
+              ti mismo.
+            </p>
+          </div>
         </div>
 
         <div className="mt-[3rem] md:mt-[5rem]">
-          <div className="grid w-[80%] mx-auto gap-[2rem] md:grid-cols-2 md:w-[80%]">
+          <div className="grid w-[95%] mx-auto gap-[2rem] lg:grid-cols-2 md:w-[80%] lg:w-[70%]">
             <div
-              className="p-4 rounded-lg border-2 border-white/20 bg-[#2A2A2A] shadow-[0_1px_35px_rgba(55,102,255,0.3)] opacity-0"
+              className="p-6 w-[95%] mx-auto rounded-lg border-2 border-white/20 bg-[#2A2A2A] shadow-[0_1px_35px_rgba(55,102,255,0.3)] opacity-0"
               ref={useAnimateFade}
             >
               <img
@@ -89,7 +109,9 @@ export const OdontologiaEstetica = () => {
             </div>
             <div className="p-4 text-center">
               <FaTooth size={40} className="text-[#43C6AC] mb-8" />
-              <h3 className="text-xl text-white text-left font-semibold mb-8">Nuestros Servicios</h3>
+              <h3 className="text-xl text-white text-left font-semibold mb-8">
+                Nuestros Servicios
+              </h3>
               <p className="text-white/80 text-left">
                 Ofrecemos una variedad de tratamientos estéticos para mejorar la
                 apariencia de tus dientes y sonrisa. Desde blanqueamiento dental

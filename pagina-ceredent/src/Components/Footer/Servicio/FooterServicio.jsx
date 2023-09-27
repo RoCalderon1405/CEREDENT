@@ -13,13 +13,49 @@ export const FooterServicio = () => {
         </div>
         <div className="flex flex-col items-center mt-8 gap-y-4">
           <h2 className="text-xl">CEREDENT</h2>
+
           <Link
             className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
-            to="/#"
+            to="/servicio/odontopediatria"
           >
-            Inicio
+            Odontopediatria
           </Link>
-          
+          <Link
+            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
+            to="/servicio/cirugia-bucal"
+          >
+            Cirugía Bucal
+          </Link>
+          <Link
+            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
+            to="/servicio/protesis-dentales"
+          >
+            Prótesis Dentales
+          </Link>
+          <Link
+            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
+            to="/servicio/periodoncias"
+          >
+            Periodóncias
+          </Link>
+          <Link
+            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
+            to="/servicio/ortodoncias"
+          >
+            Ortodoncias
+          </Link>
+          <Link
+            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
+            to="/servicio/endodoncias"
+          >
+            Endodoncias
+          </Link>
+          <Link
+            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
+            to="/servicio/bichectomia"
+          >
+            Bichectomia
+          </Link>
         </div>
 
         <div className="mt-8">
@@ -32,7 +68,7 @@ export const FooterServicio = () => {
         <div className="mt-8 flex flex-col items-center">
           <h2 className="text-xl">Dirección</h2>
           <Link
-            href="https://www.google.com/maps/place/CERE+DENT+(Centro+de+Rehabilitaci%C3%B3n+Dental)/@19.4502989,-99.0692346,16z/data=!4m10!1m2!2m1!1sceredent!3m6!1s0x85d1fbd10dc1d907:0xedd46fe64a179ea9!8m2!3d19.4487276!4d-99.0664501!15sCghjZXJlZGVudFoKIghjZXJlZGVudJIBB2RlbnRpc3TgAQA!16s%2Fg%2F11j3m7nwf6?entry=ttu"
+            to="https://www.google.com/maps/place/CERE+DENT+(Centro+de+Rehabilitaci%C3%B3n+Dental)/@19.4502989,-99.0692346,16z/data=!4m10!1m2!2m1!1sceredent!3m6!1s0x85d1fbd10dc1d907:0xedd46fe64a179ea9!8m2!3d19.4487276!4d-99.0664501!15sCghjZXJlZGVudFoKIghjZXJlZGVudJIBB2RlbnRpc3TgAQA!16s%2Fg%2F11j3m7nwf6?entry=ttu"
             className="text-center mt-4 text-cyan-500 transition-all duration-300 ease-in-out lg:hover:scale-105 lg:hover:text-blue-600"
             target="_blank"
           >
@@ -50,7 +86,7 @@ export const FooterServicio = () => {
           Desarrollado por
           <Link
             className="text-md ml-2 text-cyan-400 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
-            href="https://portfoliorocalderon.netlify.app/"
+            to="https://portfoliorocalderon.netlify.app/"
             target="_blank"
           >
             Roberto Calderón

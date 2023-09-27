@@ -7,6 +7,7 @@ export const ImgAbout = ({ id, imagen, description }) => {
       key={id}
       src={imagen}
       alt={description}
+      loading="lazy"
       className="rounded-lg w-full"
     />
     </div>

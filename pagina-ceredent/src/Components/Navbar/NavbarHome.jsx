@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -15,7 +15,6 @@ import {
 } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import LogoCeredentNav from "../../assets/Logo/CEREDENTcorteSinText.png";
-import { MyButton } from "../../Hooks/MyButton";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { AiFillHome } from "react-icons/ai";
 import {
@@ -25,10 +24,16 @@ import {
   FaBriefcase,
   FaComments,
 } from "react-icons/fa";
+import { BiSolidMap } from "react-icons/bi";
 import "./navbar.css";
 
 export const NavbarHome = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Función para cerrar el Dropdown con un click
+  const handleCloseDropdown = () => {
+    setIsMenuOpen(false);
+  };
 
   const dentalServices = [
     {
@@ -44,27 +49,32 @@ export const NavbarHome = () => {
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Cirugía bucal",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/cirugia-bucal",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Prótesis dentales",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/protesis-dentales",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Periodoncias",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/periodoncias",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Ortodoncias",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/ortodoncias",
     },
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Endodoncias",
-      ruta: "/servicios/odontologia-estetica",
+      ruta: "/servicios/endodoncias",
+    },
+    {
+      icon: <FaTooth className="text-gray-400" />,
+      title: "Bichectomia",
+      ruta: "/servicios/endodoncias",
     },
   ];
 
@@ -91,7 +101,7 @@ export const NavbarHome = () => {
                 src={LogoCeredentNav}
                 alt="CEREDENT"
                 id="logoCere"
-                className=""
+                loading="eager"
               />
             </a>
           </NavbarBrand>
@@ -102,7 +112,7 @@ export const NavbarHome = () => {
         <NavbarContent className="hidden lg:flex p-0" justify="center">
           <NavbarBrand className="p-0">
             <a href="#">
-              <img src={LogoCeredentNav} alt="CEREDENT" id="logoCere" />
+              <img src={LogoCeredentNav} alt="CEREDENT" id="logoCere" loading="auto"/>
             </a>
           </NavbarBrand>
         </NavbarContent>
@@ -159,7 +169,7 @@ export const NavbarHome = () => {
                 <DropdownTrigger>
                   <Button
                     size="sm"
-                    className="p-0 gap-0 bg-transparent min-w-[1px] h-[18px] data-[hover=true]:bg-transparent overflow-visible justify-start "
+                    className="p-0 gap-0 bg-transparent min-w-[10px] h-[18px] data-[hover=true]:bg-transparent overflow-visible justify-start "
                     endContent={
                       <MdOutlineKeyboardArrowDown className="hover:text-blue-600 text-5xl" />
                     }
@@ -168,7 +178,7 @@ export const NavbarHome = () => {
               </div>
             </NavbarItem>
             <DropdownMenu
-              className="w-[230px]"
+              className="w-[230px] bg-white/80"
               itemClasses={{
                 base: "gap-3",
               }}
@@ -185,17 +195,7 @@ export const NavbarHome = () => {
               ))}
             </DropdownMenu>
           </Dropdown>
-          {/* <NavbarItem>
-            <div className="flex items-center">
-              <a
-                color="foreground"
-                href="#trabajos"
-                className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
-              >
-                Laboratorio Dental
-              </a>
-            </div>
-          </NavbarItem> */}
+
           <NavbarItem>
             <div className="flex items-center">
               <a
@@ -210,13 +210,13 @@ export const NavbarHome = () => {
         </NavbarContent>
 
         <NavbarContent className="flex-grow-lg" justify="end">
-          <NavbarItem className="p-2">
+          <NavbarItem className="">
             <a href="#contacto">
               <Button
                 size="md"
                 color="blue"
                 variant="shadow"
-                className="w-auto text-[.85rem] bg-blue-900 text-white font-extrabold transition duration-300 ease-out lg:hover:scale-105"
+                className="w-auto text-[.65rem] md:text-[.85rem] bg-blue-900 text-white font-extrabold transition duration-300 ease-out lg:hover:scale-105"
               >
                 Contáctanos
               </Button>
@@ -228,6 +228,7 @@ export const NavbarHome = () => {
         <NavbarMenu className="w-[75%] bg-white/80">
           <NavbarMenuItem>
             <Button
+              onClick={handleCloseDropdown}
               className="bg-transparent my-5 p-1"
               startContent={
                 <AiFillHome className="text-5xl text-sky-500 items-bottom" />
@@ -240,6 +241,7 @@ export const NavbarHome = () => {
           </NavbarMenuItem>
           <NavbarMenuItem>
             <Button
+              onClick={handleCloseDropdown}
               className="bg-transparent my-5 p-1"
               startContent={<FaUser className="text-3xl text-sky-500" />}
             >
@@ -253,6 +255,7 @@ export const NavbarHome = () => {
           </NavbarMenuItem>
           <NavbarMenuItem>
             <Button
+              onClick={handleCloseDropdown}
               className="bg- my-5 p-1"
               startContent={<FaUserMd className="text-3xl text-sky-500" />}
             >
@@ -267,6 +270,7 @@ export const NavbarHome = () => {
           {/* Menú desplegable servicios */}
           <NavbarMenuItem>
             <Button
+              onClick={handleCloseDropdown}
               disableRipple
               className="my-5 p-1 data-[hover=true]:bg-transparent overflow-visible "
               radius="sm"
@@ -281,20 +285,22 @@ export const NavbarHome = () => {
               </a>
             </Button>
           </NavbarMenuItem>
-          <div className="flex flex-col ml-10 text-start md:text-lg">
+          <div className="flex flex-col ml-6 text-start md:text-lg">
             {dentalServices.map((service) => (
               <div
                 key={service.title}
                 className="flex items-center space-x-2 mb-3 p-1"
               >
                 <span className="">{service.icon}</span>
-                <Link to={service.ruta}>{service.title}</Link>
+                <Link onClick={handleCloseDropdown} to={service.ruta}>
+                  {service.title}
+                </Link>
               </div>
             ))}
           </div>
-
           <NavbarMenuItem>
             <Button
+              onClick={handleCloseDropdown}
               className="bg-transparent my-5 p-1"
               startContent={<FaBriefcase className="text-3xl text-sky-500" />}
             >
@@ -308,6 +314,7 @@ export const NavbarHome = () => {
           </NavbarMenuItem>
           <NavbarMenuItem>
             <Button
+              onClick={handleCloseDropdown}
               className="bg-transparent my-5  p-1 "
               startContent={<FaComments className="text-5xl text-sky-500" />}
             >
@@ -316,6 +323,20 @@ export const NavbarHome = () => {
                 href="#testimonios"
               >
                 Testimonios
+              </a>
+            </Button>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Button
+              onClick={handleCloseDropdown}
+              className="bg-transparent my-5  p-1 "
+              startContent={<BiSolidMap className="text-5xl text-sky-500" />}
+            >
+              <a
+                className="w-full font-medium text-xl text-black/80"
+                href="#ubicacion"
+              >
+                Ubicación
               </a>
             </Button>
           </NavbarMenuItem>

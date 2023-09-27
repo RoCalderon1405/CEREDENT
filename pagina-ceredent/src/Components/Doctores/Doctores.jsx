@@ -1,5 +1,4 @@
 import React from "react";
-import { FaUserMd } from "react-icons/fa";
 import { CardDoc } from "./CardDoc";
 import Dentista1 from "../../assets/Dentistas/dentista.png";
 import Dentista2 from "../../assets/Dentistas/dentista2.png";
@@ -9,17 +8,17 @@ export const Doctores = () => {
   const team = [
     {
       id: 1,
-      Nombre: "María Calderón",
-      NombreCompleto: "María Guadalupe Calderón Carranza",
-      About: "Hola soy un about",
+      Nombre: "María García",
+      NombreCompleto: "María García López",
+      About: "Hola, Soy María García",
       Img1: Dentista1,
       Img2: Dentista2,
     },
     {
       id: 2,
-      Nombre: "Roberto Rojas",
-      NombreCompleto: "Roberto Arturo Rojas Calderón",
-      About: "Hola soy un about",
+      Nombre: "Laura Martínez",
+      NombreCompleto: "Laura Martínez Rodríguez",
+      About: "Hola, Laura Martínez",
       Img1: Dentista1,
       Img2: Dentista2,
     },
@@ -68,11 +67,31 @@ export const Doctores = () => {
     });
   };
 
+  const animateFade = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(
+          "animate-fade",
+          "animate-duration-1200",
+          "animate-ease-in-out",
+          "opacity-100"
+        );
+      } else {
+        entry.target.classList.remove(
+          "animate-fade",
+          "animate-duration-1200",
+          "animate-ease-in-out",
+          "opacity-100"
+        );
+      }
+    });
+  };
+
   // Crear instancias del hook de Intersection Observer
   const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, {
     threshold: 0.1,
   });
-  const useAnimateFadeRight = useIntersectionObserver(animateFadeRight, {
+  const useAnimateFade = useIntersectionObserver(animateFade, {
     threshold: 0.1,
   });
   const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, {
@@ -82,29 +101,28 @@ export const Doctores = () => {
   return (
     <section
       id="doctores"
-      className="py-8 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100"
+      className="py-8 bg-[#191645]"
     >
       <div className="container m-auto py-[5rem]">
         <div className="flex flex-col items-center w-full mx-auto md:w-[60%] lg:justify-center">
           <h1
-            className="flex justify-center text-3xl md:text-4xl font-black mb-10 text-sky-400 opacity-0 mx-auto"
+            className="flex justify-center text-3xl md:text-4xl font-black mb-10 text-white opacity-0 mx-auto"
             ref={useAnimateFadeUp}
           >
-            Nuestro Equipo <FaUserMd className="text-sky-600 ml-2" />
+            Nuestro Equipo
           </h1>
 
           <p
-            className="text-md text-center mt-1 mb-6 text-black opacity-0 mx-0 md:text-lg"
+            className="text-md text-center mt-1 mb-6 text-white/80 opacity-0 mx-0 md:text-lg"
             ref={useAnimateFadeLeft}
           >
             En CEREDENT contamos con un equipo de doctores altamente capacitados y comprometidos con tu salud bucal. Nuestros profesionales tienen años de experiencia en odontología y están aquí para brindarte la mejor atención y soluciones personalizadas para tus necesidades dentales.
           </p>
-          <div className="line-animation"></div>
         </div>
         <div className="flex justify-center">
           <div
             className="flex flex-col justify-around gap-5 mt-10 opacity-0 lg:flex-row lg:w-[80%]"
-            ref={useAnimateFadeRight}
+            ref={useAnimateFade}
           >
             {team.map((miembro) => (
               <CardDoc

@@ -1,11 +1,15 @@
 import React from "react";
 import { CartaServicios } from "./CartaServicios";
-import protesico from "../../assets/Servicios/protesico.png";
-import cuidadoDental from "../../assets/Servicios/cuidado-dental.png";
-import cepilloDiente from "../../assets/Servicios/cepillo-de-dientes.png";
-import radiografia from "../../assets/Servicios/radiografia.png";
-import corona from "../../assets/Servicios/corona-dental.png";
-import extraccion from "../../assets/Servicios/extraccion.png";
+import {
+  Bichectomia,
+  CirugiaBucal,
+  Endodoncias,
+  EsteticaDental,
+  OdontoPediatria,
+  Ortodoncias,
+  Periodoncias,
+  ProtesisDental,
+} from "./ServiciosImgImport";
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 
 export const Servicios = () => {
@@ -13,7 +17,7 @@ export const Servicios = () => {
     {
       id: 1,
       title: "Odontología estética",
-      img: cuidadoDental,
+      img: EsteticaDental,
       descripcion:
         "Mejora la apariencia dental con procedimientos como blanqueamiento y carillas.",
       ruta: "servicios/odontologia-estetica",
@@ -21,49 +25,57 @@ export const Servicios = () => {
     {
       id: 2,
       title: "Odontopediatría",
-      img: protesico,
+      img: OdontoPediatria,
       descripcion: "Cuidado dental especializado para niños.",
-      ruta: "servicios/odontologia-estetica",
+      ruta: "servicios/odontopediatria",
     },
     {
       id: 3,
       title: "Cirugía bucal",
-      img: cepilloDiente,
+      img: CirugiaBucal,
       descripcion:
         "Procedimientos quirúrgicos en la boca, incluyendo extracciones y colocación de implantes.",
-      ruta: "servicios/odontologia-estetica",
+      ruta: "servicios/cirugia-bucal",
     },
     {
       id: 4,
       title: "Prótesis Dental",
-      img: radiografia,
+      img: ProtesisDental,
       descripcion:
         "Restauración de dientes perdidos con prótesis removibles o fijas.",
-      ruta: "servicios/odontologia-estetica",
+      ruta: "servicios/protesis-dentales",
     },
     {
       id: 5,
       title: "Periodoncia",
-      img: corona,
+      img: Periodoncias,
       descripcion:
         "Tratamiento de enfermedades de las encías y tejidos que sostienen los dientes.",
-      ruta: "servicios/odontologia-estetica",
+      ruta: "servicios/periodoncias",
     },
     {
       id: 6,
       title: "Ortodoncia",
-      img: extraccion,
+      img: Ortodoncias,
       descripcion:
         "Corrección de la posición de los dientes y la mandíbula para mejorar la mordida y estética facial.",
-      ruta: "servicios/odontologia-estetica",
+      ruta: "servicios/ortodoncias",
     },
     {
       id: 7,
       title: "Endodoncia",
-      img: extraccion,
+      img: Endodoncias,
       descripcion:
         "Tratamiento de conductos radiculares para salvar dientes dañados o infectados.",
-      ruta: "servicios/odontologia-estetica",
+      ruta: "servicios/endodoncias",
+    },
+    {
+      id: 8,
+      title: "Bichectomia",
+      img: Bichectomia,
+      descripcion:
+        "Tratamiento de conductos radiculares para salvar dientes dañados o infectados.",
+      ruta: "servicios/endodoncias",
     },
   ];
 

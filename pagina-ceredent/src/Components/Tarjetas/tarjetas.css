@@ -1,6 +1,6 @@
 .tarjetas-container {
     position: relative;
-    height: 100vh; /* Ajusta la altura según tus necesidades */
+    height: 100vh;
     overflow: hidden;
   }
   
@@ -12,7 +12,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    transform: scale(1.1) ; /* Ajusta el factor de escala según tus necesidades */
+    transform: scale(1.1) ; 
   }
   
   
@@ -22,7 +22,7 @@
     left: 50%;
     transform: translate(-50%, -40%);
     text-align: center;
-    color: #fff; /* Color del texto */
+    color: #fff;
     width: 100%;
   }
   

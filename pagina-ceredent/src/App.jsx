@@ -6,7 +6,7 @@ import { About } from "./Components/About/About";
 import { Doctores } from "./Components/Doctores/Doctores";
 import { Servicios } from "./Components/Servicios/Servicios";
 import { Footer } from "./Components/Footer/Footer";
-import { Trabajos } from "./Components/Trabajos/Trabajos";
+// import { Trabajos } from "./Components/Trabajos/Trabajos";
 import { ContactUs } from "./Components/Contact/ContactUs";
 import { Testimonios } from "./Components/Testimonios/Testimonios";
 import { Tarjetas } from "./Components/Tarjetas/Tarjetas";
@@ -15,6 +15,12 @@ import { OdontologiaEstetica } from "./Components/Servicios/TipoServicio/OdontoE
 import { NavbarServicio } from "./Components/Navbar/Servicio/NavbarServicio";
 import { FooterServicio } from "./Components/Footer/Servicio/FooterServicio";
 import { OdontoPediatria } from "./Components/Servicios/TipoServicio/OdontoPediatria";
+import { CirugiaBucal } from "./Components/Servicios/TipoServicio/CirugíaBucal";
+import { ProtesisDental } from "./Components/Servicios/TipoServicio/ProtesisDental";
+import { Periodoncias } from "./Components/Servicios/TipoServicio/Periodoncias";
+import { Ortodoncias } from "./Components/Servicios/TipoServicio/Ortodoncias";
+import { Endodoncias } from "./Components/Servicios/TipoServicio/Endodoncias";
+import { Bichectomia } from "./Components/Servicios/TipoServicio/Bichectomia";
 
 function App() {
   // Componente de contenedor para los servicios
@@ -41,7 +47,7 @@ function App() {
                 <Header />
                 <About />
                 <Historia />
-                {/* <Doctores /> */}
+                <Doctores />
                 <Servicios />
                 <Tarjetas />
                 {/* <Trabajos /> */}
@@ -65,6 +71,54 @@ function App() {
             element={
               <ServicioContainer>
                 <OdontoPediatria />
+              </ServicioContainer>
+            }
+          />
+          <Route
+            path="/servicios/cirugia-bucal"
+            element={
+              <ServicioContainer>
+                <CirugiaBucal />
+              </ServicioContainer>
+            }
+          />
+          <Route
+            path="/servicios/protesis-dentales"
+            element={
+              <ServicioContainer>
+                <ProtesisDental />
+              </ServicioContainer>
+            }
+          />
+          <Route
+            path="/servicios/periodoncias"
+            element={
+              <ServicioContainer>
+                <Periodoncias />
+              </ServicioContainer>
+            }
+          />
+          <Route
+            path="/servicios/ortodoncias"
+            element={
+              <ServicioContainer>
+                <Ortodoncias />
+              </ServicioContainer>
+            }
+          />
+          <Route
+            path="/servicios/endodoncias"
+            element={
+              <ServicioContainer>
+                <Endodoncias />
+              </ServicioContainer>
+            }
+          />
+          <Route
+            path="/servicios/bichectomia"
+            element={
+              <ServicioContainer>
+                <Bichectomia />
               </ServicioContainer>
             }
           />

@@ -1,5 +1,4 @@
 import React from "react";
-import Mapa from "../../assets/Contacto/mapa.png";
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 
 export const MapaContact = () => {
@@ -71,8 +70,7 @@ export const MapaContact = () => {
             <h3 className="text-xl font-semibold text-white/80 mb-5">
               Dirección
             </h3>
-            <p className="text-white/60">
-              {" "}
+            <p className="text-white/80">
               Av. 613 no. 33-4ta, sección de Aragón, Gustavo A. Madero, 07979
               Ciudad de México, CDMX
             </p>
@@ -81,7 +79,7 @@ export const MapaContact = () => {
             <h3 className="text-xl font-semibold text-white/80 mb-5">
               Horario
             </h3>
-            <p className="text-white/60">Lunes a Sábado: 9 AM - 5 PM</p>
+            <p className="text-white/80">Lunes a Sábado: 9 AM - 5 PM</p>
           </div>
         </div>
 

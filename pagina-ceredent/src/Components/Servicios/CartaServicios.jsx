@@ -7,7 +7,6 @@ import {
   Button,
   Link,
 } from "@nextui-org/react";
-// https://www.flaticon.es/iconos-gratis/dental
 
 export const CartaServicios = ({ id, title, img, descripcion, ruta }) => {
   return (
@@ -21,6 +20,7 @@ export const CartaServicios = ({ id, title, img, descripcion, ruta }) => {
               alt={img}
               className="w-full object-cover h-full bg-white"
               src={img}
+              loading="lazy"
             />
           </div>
         </CardBody>

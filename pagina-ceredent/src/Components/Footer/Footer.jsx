@@ -37,12 +37,7 @@ export const Footer = () => {
           >
             Servicios
           </Link>
-          <Link
-            className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
-            href="#trabajos"
-          >
-            Trabajos
-          </Link>
+          
           <Link
             className="text-cyan-500 hover:scale-105 hover:text-blue-600 transition-all duration-300 ease-in-out"
             href="#contacto"

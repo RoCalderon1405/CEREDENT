@@ -15,11 +15,13 @@ import {
 export const CardDoc = ({ id, nombre, nombreCompleto, about, img1, img2 }) => {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const [size, setSize] = useState("full");
- 
+
   const handleOpen = (size) => {
     setSize(size);
     onOpen();
   };
+
+
   return (
     <>
       <Card
@@ -31,6 +33,7 @@ export const CardDoc = ({ id, nombre, nombreCompleto, about, img1, img2 }) => {
           alt="Woman listing to music"
           className="object-cover w-full h-full"
           src={img1}
+          loading="lazy"
         />
         <CardFooter className="justify-between font-bold before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
           <p className="text-xl font-extrabold text-white/80">{nombre}</p>
@@ -49,14 +52,14 @@ export const CardDoc = ({ id, nombre, nombreCompleto, about, img1, img2 }) => {
             size="5xl"
             backdrop="blur"
             scrollBehavior="inside"
-            placement= "center"
+            placement="center"
             isOpen={isOpen}
             onOpenChange={onOpenChange}
             onClose={onClose}
             radius="2xl"
             classNames={{
               body: "py-10",
-            //   backdrop: "bg-[#292f46]/50 backdrop-opacity-40",
+              //   backdrop: "bg-[#292f46]/50 backdrop-opacity-40",
               base: "border-[#292f46] bg-[#19172c] dark:bg-[#19172c] text-[#a8b0d3]",
               header: "border-b-[1px] border-[#292f46]",
               footer: "border-t-[1px] border-[#292f46]",

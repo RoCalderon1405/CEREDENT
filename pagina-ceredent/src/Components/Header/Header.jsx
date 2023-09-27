@@ -1,40 +1,11 @@
 import React from "react";
 import VideoDiente from "../../assets/Portada/videoDiente1.webm";
-import Familia from "../../assets/familia.png";
 import Ceredent from "../../assets/Logo/CEREDENT.jpeg";
 import { FaTooth } from "react-icons/fa";
 import { Button, Link } from "@nextui-org/react";
-import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 import "./header.css";
 
 export const Header = () => {
-  // Definir las funciones de callback para los efectos de animación
-  const animateFadeLeft = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate-fade-left");
-      }
-    });
-  };
-  const animateFadeUp = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add(
-          "animate-fade-up",
-          "animate-duration-1000",
-          "animate-ease-in-out"
-        );
-      }
-    });
-  };
-
-  // Crear instancias del hook de Intersection Observer
-  const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, {
-    threshold: 0.8,
-  });
-  const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, {
-    threshold: 0.8,
-  });
 
   return (
     <>
@@ -50,6 +21,7 @@ export const Header = () => {
                 alt="CEREDENT"
                 className="shadow-2xl w-60 md:w-auto"
                 id="ceredentHeader"
+                loading="eager"
               />
             </div>
             <div className="text-sm m-auto mt-3 mb-8 text-center md:text-lg md:mt-9 animate-fade-left animate-duration-1000 animate-ease-linear">
@@ -73,6 +45,7 @@ export const Header = () => {
           <video
             className="object-cover object-center w-full h-full"
             autoPlay
+            preload="auto"
             muted
             loop
           >

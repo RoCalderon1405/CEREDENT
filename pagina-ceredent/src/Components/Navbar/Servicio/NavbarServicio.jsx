@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -13,22 +13,31 @@ import {
   DropdownMenu,
   Button,
 } from "@nextui-org/react";
+// import { Navbar } from "@nextui-org/react";
+// import { NavbarBrand } from "@nextui-org/react";
+// import { NavbarContent } from "@nextui-org/react";
+// import { NavbarItem } from "@nextui-org/react";
+// import { NavbarMenuToggle } from "@nextui-org/react";
+// import { NavbarMenu } from "@nextui-org/react";
+// import { NavbarMenuItem } from "@nextui-org/react";
+// import { DropdownItem } from "@nextui-org/react";
+// import { DropdownTrigger } from "@nextui-org/react";
+// import { Dropdown } from "@nextui-org/react";
+// import { DropdownMenu } from "@nextui-org/react";
+// import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import LogoCeredentNav from "../../../assets/Logo/CEREDENTcorteSinText.png";
-import { MyButton } from "../../../Hooks/MyButton";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { AiFillHome } from "react-icons/ai";
-import {
-  FaTooth,
-  FaUser,
-  FaUserMd,
-  FaBriefcase,
-  FaComments,
-} from "react-icons/fa";
+import { FaTooth } from "react-icons/fa";
 import "../navbar.css";
 
 export const NavbarServicio = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Función para cerrar el Dropdown con un click
+  const handleCloseDropdown = () => {
+    setIsMenuOpen(false);
+  };
 
   const dentalServices = [
     {
@@ -65,6 +74,11 @@ export const NavbarServicio = () => {
       icon: <FaTooth className="text-gray-400" />,
       title: "Endodoncias",
       ruta: "/servicios/odontologia-estetica",
+    },
+    {
+      icon: <FaTooth className="text-gray-400" />,
+      title: "Bichectomia",
+      ruta: "/servicios/endodoncias",
     },
   ];
 
@@ -175,7 +189,7 @@ export const NavbarServicio = () => {
                 size="md"
                 color="blue"
                 variant="shadow"
-                className="w-auto text-[.85rem] bg-blue-900 text-white font-extrabold transition duration-300 ease-out lg:hover:scale-105"
+                className="w-auto text-[.65rem] md:text-[.85rem] bg-blue-900 text-white font-extrabold transition duration-300 ease-out lg:hover:scale-105"
               >
                 Contáctanos
               </Button>
@@ -187,6 +201,7 @@ export const NavbarServicio = () => {
         <NavbarMenu className="w-[75%] bg-white/80">
           <NavbarMenuItem>
             <Button
+              onClick={handleCloseDropdown}
               className="bg-transparent my-5 p-1"
               startContent={
                 <AiFillHome className="text-5xl text-sky-500 items-bottom" />

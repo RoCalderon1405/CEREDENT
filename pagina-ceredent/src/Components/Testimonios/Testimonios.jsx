@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-import { FaUsers } from "react-icons/fa";
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 import { CartaTestimonios } from "./CartaTestimonios";
 import testimonio1 from "../../assets/Testimonios/testimonio1.jpg";

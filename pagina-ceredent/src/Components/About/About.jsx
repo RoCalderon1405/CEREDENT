@@ -1,6 +1,13 @@
 import React from "react";
 import { FaTooth } from "react-icons/fa";
-import AtenciónImg from "../../assets/dentistaTrabajando.jpg";
+import {
+  Consultorio1,
+  Consultorio2,
+  Consultorio3,
+  Consultorio4,
+  Consultorio5,
+  Consultorio6,
+} from "../../assets/Constultorio/importConsultorio";
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 import { ImgAbout } from "./ImgAbout";
 
@@ -75,9 +82,6 @@ export const About = () => {
   const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, {
     threshold: 0.1,
   });
-  const useAnimateButtonFadeUp = useIntersectionObserver(animateFadeUp, {
-    threshold: 0.1,
-  });
   const useAnimateFade = useIntersectionObserver(animateFade, {
     threshold: 0.1,
   });
@@ -91,42 +95,42 @@ export const About = () => {
   const Imgs = [
     {
       id: 1,
-      imagen: AtenciónImg,
+      imagen: Consultorio1,
       description: "Description",
       efecto: "useAnimateFadeUp",
       delay: 100,
     },
     {
       id: 2,
-      imagen: AtenciónImg,
+      imagen: Consultorio2,
       description: "Description",
       efecto: "h",
       delay: 200,
     },
     {
       id: 3,
-      imagen: AtenciónImg,
+      imagen: Consultorio3,
       description: "Description",
       efecto: "h",
       delay: 300,
     },
     {
       id: 4,
-      imagen: AtenciónImg,
+      imagen: Consultorio4,
       description: "Description",
       efecto: "h",
       delay: 400,
     },
     {
       id: 5,
-      imagen: AtenciónImg,
+      imagen: Consultorio5,
       description: "Description",
       efecto: "h",
       delay: 500,
     },
     {
       id: 6,
-      imagen: AtenciónImg,
+      imagen: Consultorio6,
       description: "Description",
       efecto: "h",
       delay: 600,
@@ -157,8 +161,6 @@ export const About = () => {
     },
   ];
 
-  
-
   return (
     <section
       id="aboutUs"
@@ -180,7 +182,6 @@ export const About = () => {
             calidad y un enfoque en la comodidad y bienestar de nuestros
             pacientes.
           </p>
-          <div className="line-animation"></div>
         </div>
 
         <div className="mt-[5rem]">
@@ -196,9 +197,7 @@ export const About = () => {
             ))}
           </div>
 
-          <div
-            className="grid gap-5 grid-cols-1 w-[80%] md:w-[65%] mt-[9rem] mx-auto md:grid-cols-2 lg:grid-cols-3"
-          >
+          <div className="grid gap-5 grid-cols-1 w-[80%] md:w-[65%] mt-[9rem] mx-auto md:grid-cols-2 lg:grid-cols-3">
             {sections.map((section) => (
               <div
                 key={section.id}
