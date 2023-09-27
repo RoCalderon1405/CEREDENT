@@ -100,7 +100,7 @@ export const Testimonios = () => {
         <div className="">
           <Swiper
             centeredSlides={true}
-            slidesPerView={'3'}
+            slidesPerView={'1'}
             effect={'coverflow'}
             grabCursor={true}
             coverflowEffect={{
