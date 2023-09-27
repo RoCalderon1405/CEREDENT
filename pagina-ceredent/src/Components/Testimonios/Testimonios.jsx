@@ -16,7 +16,7 @@ import {
 
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 import { CartaTestimonios } from "./CartaTestimonios";
-import testimonio1 from "../../assets/Testimonios/testimonio1.jpg";
+import testimonio1 from "../../assets/Testimonios/testimonio1.webp";
 import "./testimonios.css";
 
 export const Testimonios = () => {

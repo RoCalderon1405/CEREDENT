@@ -1,5 +1,5 @@
 import React from "react";
-import testimonio1 from "../../assets/Testimonios/testimonio1.jpg";
+import testimonio1 from "../../assets/Testimonios/testimonio1.webp";
 
 export const CartaTestimonios = () => {
   return (
@@ -7,7 +7,7 @@ export const CartaTestimonios = () => {
       <div className="justify-between">
         <div className="flex gap-5">
           <div className="ml-3 my-3 border-2 w-[50px] h-[50px] border-[#43C6AC] rounded-full overflow-hidden">
-            <img src={testimonio1} alt="Poncho" className="rounded-full" />
+            <img src={testimonio1} alt="Poncho" className="" />
           </div>
           <div className="flex flex-col gap-1 items-start justify-center">
             <h4 className="text-small font-semibold leading-none text-white">
