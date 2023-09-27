@@ -1,7 +1,7 @@
 import React from "react";
 import { CardDoc } from "./CardDoc";
-import Dentista1 from "../../assets/Dentistas/dentista.png";
-import Dentista2 from "../../assets/Dentistas/dentista2.png";
+import Dentista1 from "../../assets/Dentistas/dentista.webp";
+import Dentista2 from "../../assets/Dentistas/dentista2.webp";
 import useIntersectionObserver from "../../Hooks/InterseccitonObserver";
 
 export const Doctores = () => {

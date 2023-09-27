@@ -14,7 +14,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import { Link } from "react-router-dom";
-import LogoCeredentNav from "../../assets/Logo/CEREDENTcorteSinText.png";
+import LogoCeredentNav from "../../assets/Logo/CEREDENTcorteSinText.webp";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { AiFillHome } from "react-icons/ai";
 import {

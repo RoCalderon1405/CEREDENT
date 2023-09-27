@@ -1,6 +1,6 @@
 import React from "react";
 import VideoDiente from "../../assets/Portada/videoDiente1.webm";
-import Ceredent from "../../assets/Logo/CEREDENT.jpeg";
+import Ceredent from "../../assets/Logo/CEREDENT.webp";
 import { FaTooth } from "react-icons/fa";
 import { Button, Link } from "@nextui-org/react";
 import "./header.css";

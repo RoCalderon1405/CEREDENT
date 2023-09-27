@@ -13,20 +13,8 @@ import {
   DropdownMenu,
   Button,
 } from "@nextui-org/react";
-// import { Navbar } from "@nextui-org/react";
-// import { NavbarBrand } from "@nextui-org/react";
-// import { NavbarContent } from "@nextui-org/react";
-// import { NavbarItem } from "@nextui-org/react";
-// import { NavbarMenuToggle } from "@nextui-org/react";
-// import { NavbarMenu } from "@nextui-org/react";
-// import { NavbarMenuItem } from "@nextui-org/react";
-// import { DropdownItem } from "@nextui-org/react";
-// import { DropdownTrigger } from "@nextui-org/react";
-// import { Dropdown } from "@nextui-org/react";
-// import { DropdownMenu } from "@nextui-org/react";
-// import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
-import LogoCeredentNav from "../../../assets/Logo/CEREDENTcorteSinText.png";
+import LogoCeredentNav from "../../../assets/Logo/CEREDENTcorteSinText.webp";
 import { AiFillHome } from "react-icons/ai";
 import { FaTooth } from "react-icons/fa";
 import "../navbar.css";

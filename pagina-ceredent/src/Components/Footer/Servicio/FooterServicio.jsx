@@ -1,5 +1,5 @@
 import React from "react";
-import Ceredent from "../../../assets/Logo/CEREDENTcorteSinText.png";
+import Ceredent from "../../../assets/Logo/CEREDENTcorteSinText.webp";
 import { Link } from "react-router-dom";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";

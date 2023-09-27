@@ -49,13 +49,13 @@ export const Tarjetas = () => {
           </p>
           <div className="flex flex-col items-center max-w-[80%] mx-auto justify-center gap-[4rem] mt-8 md:mt-[8rem] md:justify-evenly lg:flex-row">
             <div className="opacity-0" ref={useAnimateFadeUp}>
-              <img src={Visa} alt="" className="w-[160px] md:w-[230px]" />
+              <img src={Visa} alt="" className="w-[160px] md:w-[230px]" loading="lazy" />
             </div>
             <div className="opacity-0" ref={useAnimateFadeUp2}>
-              <img src={MasterCard} alt="" className="w-[160px] md:w-[230px]" />
+              <img src={MasterCard} alt="" className="w-[160px] md:w-[230px]" loading="lazy" />
             </div>
             <div className="opacity-0" ref={useAnimateFadeUp3}>
-              <img src={American} alt="" className="w-[160px] md:w-[230px]" />
+              <img src={American} alt="" className="w-[160px] md:w-[230px]" loading="lazy" />
             </div>
           </div>
         </div>
