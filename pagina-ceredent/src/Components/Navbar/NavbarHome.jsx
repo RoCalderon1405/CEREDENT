@@ -156,6 +156,17 @@ export const NavbarHome = () => {
               </a>
             </div>
           </NavbarItem>
+          <NavbarItem>
+            <div className="flex items-center">
+              <a
+                href="#doctores"
+                aria-current="page"
+                className="p-1 font-medium transition duration-300 ease-out hover:scale-[1.1] hover:text-sky-400 hover:font-bold"
+              >
+                Doctores
+              </a>
+            </div>
+          </NavbarItem>
           <Dropdown backdrop="blur" size="sm">
             <NavbarItem>
               <div className="flex items-center">
