@@ -74,7 +74,7 @@ export const NavbarHome = () => {
     {
       icon: <FaTooth className="text-gray-400" />,
       title: "Bichectomia",
-      ruta: "/servicios/endodoncias",
+      ruta: "/servicios/bichectomia",
     },
   ];
 
