@@ -184,6 +184,7 @@ export const NavbarHome = () => {
                 </a>
                 <DropdownTrigger>
                   <Button
+                    aria-label="Cerrar ventana modal"
                     size="sm"
                     className="p-0 gap-0 bg-transparent min-w-[10px] h-[18px] data-[hover=true]:bg-transparent overflow-visible justify-start "
                     endContent={
@@ -205,7 +206,10 @@ export const NavbarHome = () => {
                   key={service.title}
                   description={service.description}
                 >
-                  <Link to={service.ruta} className="flex items-center gap-2 h-full w-full">
+                  <Link
+                    to={service.ruta}
+                    className="flex items-center gap-2 h-full w-full"
+                  >
                     {service.icon}
                     <span>{service.title}</span>
                   </Link>
