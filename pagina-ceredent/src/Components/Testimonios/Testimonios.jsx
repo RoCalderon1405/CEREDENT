@@ -107,6 +107,7 @@ export const Testimonios = () => {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={"1"}
+            loop
             coverflowEffect={{
               rotate: 50,
               stretch: 0,
