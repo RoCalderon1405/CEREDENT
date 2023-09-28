@@ -29,9 +29,7 @@ export const Doctores = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("animate-fade-left");
-      } else {
-        entry.target.classList.remove("animate-fade-left");
-      }
+      } 
     });
   };
   const animateFadeUp = (entries) => {
@@ -40,28 +38,8 @@ export const Doctores = () => {
         entry.target.classList.add(
           "animate-fade-up",
           "animate-duration-1000",
-          "animate-delay-[500ms]",
           "animate-ease-in-out",
           "opacity-100"
-        );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-up",
-          "animate-duration-1000",
-          "animate-delay-[500ms]",
-          "animate-ease-in-out",
-          "opacity-100"
-        );
-      }
-    });
-  };
-  const animateFadeRight = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add(
-          "animate-fade-right",
-          "animate-duration-1000",
-          "animate-ease-in-out"
         );
       }
     });
@@ -72,14 +50,7 @@ export const Doctores = () => {
       if (entry.isIntersecting) {
         entry.target.classList.add(
           "animate-fade",
-          "animate-duration-1200",
-          "animate-ease-in-out",
-          "opacity-100"
-        );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade",
-          "animate-duration-1200",
+          "animate-duration-1000",
           "animate-ease-in-out",
           "opacity-100"
         );

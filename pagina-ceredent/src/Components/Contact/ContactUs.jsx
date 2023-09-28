@@ -56,14 +56,7 @@ export const ContactUs = () => {
           "animate-ease-in-out",
           "opacity:1"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-left",
-          "animate-duration-1000",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      }
+      } 
     });
   };
   const animateFadeRight = (entries) => {
@@ -75,14 +68,7 @@ export const ContactUs = () => {
           "animate-ease-in-out",
           "opacity:1"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-right",
-          "animate-duration-1000",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      }
+      } 
     });
   };
   const animateFadeUp = (entries) => {
@@ -91,27 +77,15 @@ export const ContactUs = () => {
         entry.target.classList.add(
           "animate-fade-up",
           "animate-duration-1000",
-          "animate-delay-[500ms]",
           "animate-ease-in-out",
           "opacity:1"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-up",
-          "animate-duration-1000",
-          "animate-delay-[500ms]",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      }
+      } 
     });
   };
 
   // Crear instancias del hook de Intersection Observer
   const useAnimateFadeLeft = useIntersectionObserver(animateFadeLeft, {
-    threshold: 0.1,
-  });
-  const useAnimateFadeRight = useIntersectionObserver(animateFadeRight, {
     threshold: 0.1,
   });
   const useAnimateFadeUp = useIntersectionObserver(animateFadeUp, {

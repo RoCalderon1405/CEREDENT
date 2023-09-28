@@ -84,8 +84,6 @@ export const Servicios = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("animate-fade-left");
-      } else {
-        entry.target.classList.remove("animate-fade-left");
       }
     });
   };
@@ -94,18 +92,11 @@ export const Servicios = () => {
       if (entry.isIntersecting) {
         entry.target.classList.add(
           "animate-fade-up",
-          "animate-duration-1500",
+          "animate-duration-1000",
           "animate-ease-in-out",
           "opacity:100"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-up",
-          "animate-duration-1500",
-          "animate-ease-in-out",
-          "opacity:100"
-        );
-      }
+      } 
     });
   };
   const animateFadeRight = (entries) => {

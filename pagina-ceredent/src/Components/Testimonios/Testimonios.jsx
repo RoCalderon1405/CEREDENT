@@ -40,14 +40,7 @@ export const Testimonios = () => {
           "animate-ease-in-out",
           "opacity:1"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-left",
-          "animate-duration-1000",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      }
+      } 
     });
   };
   const animateFadeUp = (entries) => {
@@ -56,19 +49,10 @@ export const Testimonios = () => {
         entry.target.classList.add(
           "animate-fade-up",
           "animate-duration-1000",
-          "animate-delay-[500ms]",
           "animate-ease-in-out",
           "opacity:1"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-up",
-          "animate-duration-1000",
-          "animate-delay-[500ms]",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      }
+      } 
     });
   };
 

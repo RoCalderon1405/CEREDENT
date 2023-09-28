@@ -24,7 +24,7 @@ export const Header = () => {
                 loading="eager"
               />
             </div>
-            <div className="text-sm m-auto mt-3 mb-8 text-center md:text-lg md:mt-9 animate-fade-left animate-duration-1000 animate-ease-linear">
+            <div className="text-sm m-auto mt-3 mb-8 text-center md:text-lg md:mt-9 animate-fade-up animate-duration-1000 animate-ease-linear">
               <Link href="#aboutUs">
                 <Button
                   variant="ghost"
@@ -45,7 +45,6 @@ export const Header = () => {
           <video
             className="object-cover object-center w-full h-full"
             autoPlay
-            preload="auto"
             muted
             loop
           >

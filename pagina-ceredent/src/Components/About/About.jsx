@@ -22,13 +22,6 @@ export const About = () => {
           "animate-ease-in-out",
           "opacity:1"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-left",
-          "animate-duration-1000",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
       }
     });
   };
@@ -38,15 +31,6 @@ export const About = () => {
         entry.target.classList.add(
           "animate-fade-up",
           "animate-duration-1000",
-          "animate-delay-[500ms]",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-up",
-          "animate-duration-1000",
-          "animate-delay-[500ms]",
           "animate-ease-in-out",
           "opacity:1"
         );
@@ -58,15 +42,7 @@ export const About = () => {
       if (entry.isIntersecting) {
         entry.target.classList.add(
           "animate-fade",
-          "animate-duration-1500",
-          "animate-delay-100",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade",
-          "animate-duration-1500",
+          "animate-duration-1000",
           "animate-delay-100",
           "animate-ease-in-out",
           "opacity:1"

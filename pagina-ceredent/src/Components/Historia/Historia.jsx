@@ -14,14 +14,7 @@ export const Historia = () => {
           "animate-ease-in-out",
           "opacity:1"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-left",
-          "animate-duration-1000",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      }
+      } 
     });
   };
   const animateFadeUp = (entries) => {
@@ -33,14 +26,7 @@ export const Historia = () => {
           "animate-ease-in-out",
           "opacity:1"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-up",
-          "animate-duration-1200",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      }
+      } 
     });
   };
   const animateFade = (entries) => {
@@ -52,14 +38,7 @@ export const Historia = () => {
           "animate-ease-in-out",
           "opacity:1"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade",
-          "animate-duration-1800",
-          "animate-ease-in-out",
-          "opacity:1"
-        );
-      }
+      } 
     });
   };
 

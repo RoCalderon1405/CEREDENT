@@ -16,14 +16,7 @@ export const Tarjetas = () => {
           "animate-ease-in-out",
           "opacity:100"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-up",
-          "animate-duration-1500",
-          "animate-ease-in-out",
-          "opacity:100"
-        );
-      }
+      } 
     });
   };
 

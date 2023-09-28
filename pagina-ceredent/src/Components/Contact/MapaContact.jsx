@@ -8,19 +8,10 @@ export const MapaContact = () => {
         entry.target.classList.add(
           "animate-fade-up",
           "animate-duration-1000",
-          "animate-delay-[500ms]",
           "animate-ease-in-out",
           "opacity-100"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade-up",
-          "animate-duration-1000",
-          "animate-delay-[500ms]",
-          "animate-ease-in-out",
-          "opacity-100"
-        );
-      }
+      } 
     });
   };
   const animateFade = (entries) => {
@@ -28,18 +19,11 @@ export const MapaContact = () => {
       if (entry.isIntersecting) {
         entry.target.classList.add(
           "animate-fade",
-          "animate-duration-2500",
+          "animate-duration-1000",
           "animate-ease-in-out",
           "opacity-100"
         );
-      } else {
-        entry.target.classList.remove(
-          "animate-fade",
-          "animate-duration-2500",
-          "animate-ease-in-out",
-          "opacity-100"
-        );
-      }
+      } 
     });
   };
 
