@@ -3,7 +3,7 @@ import testimonio1 from "../../assets/Testimonios/testimonio1.webp";
 
 export const CartaTestimonios = () => {
   return (
-    <div className="bg-[#2A2A2A] border-2 border-[#43C6AC] rounded-[15px] shadow-[0px_10px_30px_rgba(55,102,255,0.4)] md:max-w-[400px] h-full m-auto overflow-hidden">
+    <div className="bg-[#2A2A2A] border-2 border-[#43C6AC] rounded-[15px] md:shadow-[0px_10px_30px_rgba(55,102,255,0.4)] md:max-w-[400px] h-full m-auto overflow-hidden">
       <div className="justify-between">
         <div className="flex gap-5">
           <div className="ml-3 my-3 border-2 w-[50px] h-[50px] border-[#43C6AC] rounded-full overflow-hidden">
